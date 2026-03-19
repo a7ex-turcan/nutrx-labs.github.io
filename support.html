@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — nutrx</title>
+  <meta name="description" content="Get help with nutrx. Report a bug, ask a question, or share feedback.">
+  <link rel="icon" type="image/png" href="nutrx_icon_1024.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #F7F7F5;
+      --bg-white:   #FFFFFF;
+      --text:       #111111;
+      --text-2:     #6E6E73;
+      --text-3:     #AEAEB2;
+      --accent:     #007AFF;
+      --border:     rgba(0,0,0,0.07);
+      --border-med: rgba(0,0,0,0.12);
+      --display:    'Fraunces', Georgia, serif;
+      --sans:       'DM Sans', system-ui, sans-serif;
+      --r:          16px;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── NAV ─── */
+    .nav {
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px;
+      background: rgba(247,247,245,0.92);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-logo img {
+      width: 30px; height: 30px; border-radius: 7px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    }
+    .nav-logo-text {
+      font-family: var(--display);
+      font-size: 19px; font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+    .nav-back {
+      font-size: 14px; color: var(--accent);
+      text-decoration: none; font-weight: 400;
+      transition: opacity 0.18s;
+    }
+    .nav-back:hover { opacity: 0.65; }
+
+    /* ─── MAIN ─── */
+    .main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 80px 24px 120px;
+    }
+
+    .page-eyebrow {
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .page-title {
+      font-family: var(--display);
+      font-size: clamp(38px, 6vw, 56px);
+      font-weight: 400; line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+
+    .page-intro {
+      font-size: 17px; font-weight: 300;
+      color: var(--text-2); line-height: 1.72;
+      margin-bottom: 56px;
+    }
+
+    /* ─── CARDS ─── */
+    .support-cards {
+      display: flex; flex-direction: column;
+      gap: 16px; margin-bottom: 64px;
+    }
+
+    .support-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 28px 32px;
+      text-decoration: none;
+      color: var(--text);
+      display: flex; align-items: flex-start; gap: 20px;
+      transition: border-color 0.18s, box-shadow 0.18s;
+    }
+    .support-card:hover {
+      border-color: var(--border-med);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    }
+
+    .card-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: var(--bg);
+      border-radius: 11px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .card-icon svg { width: 22px; height: 22px; }
+
+    .card-body { flex: 1; }
+    .card-title {
+      font-family: var(--display);
+      font-size: 19px; font-weight: 400;
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
+    }
+    .card-desc {
+      font-size: 14.5px; font-weight: 300;
+      color: var(--text-2); line-height: 1.6;
+    }
+
+    .card-arrow {
+      color: var(--text-3);
+      font-size: 20px; line-height: 44px;
+      flex-shrink: 0;
+    }
+
+    /* ─── FAQ ─── */
+    .faq-title {
+      font-family: var(--display);
+      font-size: 26px; font-weight: 400;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    .faq-list {
+      display: flex; flex-direction: column;
+      gap: 0;
+    }
+
+    .faq-item {
+      border-top: 1px solid var(--border);
+      padding: 20px 0;
+    }
+    .faq-item:last-child { border-bottom: 1px solid var(--border); }
+
+    .faq-q {
+      font-size: 15px; font-weight: 500;
+      margin-bottom: 8px;
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 16px;
+    }
+    .faq-q-text { flex: 1; }
+    .faq-chevron {
+      color: var(--text-3);
+      font-size: 13px;
+      transition: transform 0.22s;
+      flex-shrink: 0;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+    .faq-a {
+      font-size: 14.5px; font-weight: 300;
+      color: var(--text-2); line-height: 1.7;
+      display: none;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ─── FOOTER ─── */
+    .footer-note {
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      font-size: 13px; color: var(--text-3);
+      text-align: center;
+    }
+    .footer-note a { color: var(--text-2); text-decoration: none; }
+    .footer-note a:hover { color: var(--text); }
+
+    @media (max-width: 600px) {
+      .nav { padding: 0 24px; }
+      .main { padding: 48px 24px 80px; }
+      .support-card { padding: 22px 20px; gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <a href="/" class="nav-logo">
+    <img src="nutrx_icon_1024.png" alt="nutrx">
+    <span class="nav-logo-text">nutrx</span>
+  </a>
+  <a href="/" class="nav-back">← Back</a>
+</header>
+
+<main class="main">
+
+  <p class="page-eyebrow">Support</p>
+  <h1 class="page-title">How can we help?</h1>
+  <p class="page-intro">nutrx is built by a small team. We read every message and take every bug report seriously. Reach out — we'll get back to you.</p>
+
+  <div class="support-cards">
+
+    <a href="mailto:support@nutrx-labs.com" class="support-card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <p class="card-title">Email us</p>
+        <p class="card-desc">For general questions, feedback, or anything that doesn't fit neatly into a bug report. We aim to reply within 48 hours.</p>
+      </div>
+      <span class="card-arrow">›</span>
+    </a>
+
+    <a href="https://github.com/a7ex-turcan/nutrx/issues" target="_blank" rel="noopener" class="support-card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <p class="card-title">Report a bug</p>
+        <p class="card-desc">Found something broken? Open an issue on GitHub. Include your iOS version and a description of what happened — it helps a lot.</p>
+      </div>
+      <span class="card-arrow">›</span>
+    </a>
+
+  </div>
+
+  <!-- FAQ -->
+  <h2 class="faq-title">Common questions</h2>
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-text">Is my data backed up anywhere?</span>
+        <span class="faq-chevron">▾</span>
+      </div>
+      <p class="faq-a">No — and that's by design. nutrx stores everything exclusively on your device. Nothing is ever sent to a server. If you delete the app, your data is gone, so treat it like any other local file.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-text">Can I track any nutrient I want?</span>
+        <span class="faq-chevron">▾</span>
+      </div>
+      <p class="faq-a">Yes. nutrx has no preset list. You define your own nutrients, units, step sizes, and daily targets from scratch. Vitamin D in IU, caffeine in mg, water in glasses — whatever makes sense for you.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-text">Does nutrx work without an internet connection?</span>
+        <span class="faq-chevron">▾</span>
+      </div>
+      <p class="faq-a">Completely. nutrx is fully offline — there's no network dependency at all. It works the same on a plane as it does at home.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-text">Is nutrx free?</span>
+        <span class="faq-chevron">▾</span>
+      </div>
+      <p class="faq-a">All core tracking features are free and will stay that way, forever. A Pro tier is planned for AI-powered extras like insights and personalised recommendations — but logging, history, and everything you use daily will never be gated.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-text">What iOS version do I need?</span>
+        <span class="faq-chevron">▾</span>
+      </div>
+      <p class="faq-a">nutrx targets the latest stable version of iOS. We recommend keeping your device up to date for the best experience.</p>
+    </div>
+
+  </div>
+
+  <p class="footer-note">
+    © 2026 nutrx · <a href="/">Home</a> · <a href="privacy.html">Privacy Policy</a>
+  </p>
+
+</main>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      item.classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>
