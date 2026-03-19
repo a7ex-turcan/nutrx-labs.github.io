@@ -681,8 +681,8 @@
     try {
       const res = await fetch('https://formspree.io/f/mreyjklg', {
         method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(form)
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: form.querySelector('input[type="email"]').value })
       });
       if (res.ok) {
         form.style.display = 'none';
