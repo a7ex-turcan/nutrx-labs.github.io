@@ -672,10 +672,29 @@
   });
 
   // ── Notify form ──
-  document.getElementById('notifyForm').addEventListener('submit', function(e) {
+  document.getElementById('notifyForm').addEventListener('submit', async function(e) {
     e.preventDefault();
-    this.style.display = 'none';
-    document.getElementById('notifyThanks').style.display = 'block';
+    const form = this;
+    const btn = form.querySelector('button');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    try {
+      const res = await fetch('https://formspree.io/f/mreyjklg', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        document.getElementById('notifyThanks').style.display = 'block';
+      } else {
+        btn.textContent = 'Try again';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Try again';
+      btn.disabled = false;
+    }
   });
 
   // ── Smooth nav on scroll ──
