@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — nutrx</title>
+  <meta name="description" content="nutrx privacy policy. Short version: we collect nothing. Your data never leaves your device.">
+  <link rel="icon" type="image/png" href="nutrx_icon_1024.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #F7F7F5;
+      --bg-white:   #FFFFFF;
+      --text:       #111111;
+      --text-2:     #6E6E73;
+      --text-3:     #AEAEB2;
+      --accent:     #007AFF;
+      --green:      #34C759;
+      --border:     rgba(0,0,0,0.07);
+      --border-med: rgba(0,0,0,0.12);
+      --display:    'Fraunces', Georgia, serif;
+      --sans:       'DM Sans', system-ui, sans-serif;
+      --r:          16px;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── NAV ─── */
+    .nav {
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px;
+      background: rgba(247,247,245,0.92);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-logo img {
+      width: 30px; height: 30px; border-radius: 7px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    }
+    .nav-logo-text {
+      font-family: var(--display);
+      font-size: 19px; font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+    .nav-back {
+      font-size: 14px; color: var(--accent);
+      text-decoration: none; font-weight: 400;
+      transition: opacity 0.18s;
+    }
+    .nav-back:hover { opacity: 0.65; }
+
+    /* ─── MAIN ─── */
+    .main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 80px 24px 120px;
+    }
+
+    .page-eyebrow {
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .page-title {
+      font-family: var(--display);
+      font-size: clamp(38px, 6vw, 56px);
+      font-weight: 400; line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    .page-date {
+      font-size: 13px; color: var(--text-3);
+      margin-bottom: 40px;
+    }
+
+    /* ─── SUMMARY CARD ─── */
+    .summary-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-med);
+      border-radius: var(--r);
+      padding: 28px 32px;
+      margin-bottom: 56px;
+    }
+    .summary-card-title {
+      font-family: var(--display);
+      font-size: 17px; font-weight: 400;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+    .summary-rows {
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .summary-row {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 14.5px;
+    }
+    .summary-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      flex-shrink: 0;
+      background: var(--green);
+    }
+    .summary-row span { color: var(--text-2); font-weight: 300; }
+    .summary-row strong { font-weight: 500; color: var(--text); }
+
+    /* ─── PROSE ─── */
+    .prose { display: flex; flex-direction: column; gap: 40px; }
+
+    .prose-section h2 {
+      font-family: var(--display);
+      font-size: 22px; font-weight: 400;
+      letter-spacing: -0.015em;
+      margin-bottom: 12px;
+    }
+
+    .prose-section p {
+      font-size: 15px; font-weight: 300;
+      color: var(--text-2); line-height: 1.78;
+    }
+
+    .prose-section p + p { margin-top: 12px; }
+
+    .prose-section a {
+      color: var(--accent); text-decoration: none;
+    }
+    .prose-section a:hover { text-decoration: underline; }
+
+    /* ─── FOOTER ─── */
+    .footer-note {
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      font-size: 13px; color: var(--text-3);
+      text-align: center;
+    }
+    .footer-note a { color: var(--text-2); text-decoration: none; }
+    .footer-note a:hover { color: var(--text); }
+
+    @media (max-width: 600px) {
+      .nav { padding: 0 24px; }
+      .main { padding: 48px 24px 80px; }
+      .summary-card { padding: 22px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <a href="/" class="nav-logo">
+    <img src="nutrx_icon_1024.png" alt="nutrx">
+    <span class="nav-logo-text">nutrx</span>
+  </a>
+  <a href="/" class="nav-back">← Back</a>
+</header>
+
+<main class="main">
+
+  <p class="page-eyebrow">Privacy Policy</p>
+  <h1 class="page-title">We collect nothing.</h1>
+  <p class="page-date">Last updated: March 2026</p>
+
+  <!-- TL;DR card -->
+  <div class="summary-card">
+    <p class="summary-card-title">The short version</p>
+    <div class="summary-rows">
+      <div class="summary-row">
+        <div class="summary-dot"></div>
+        <span><strong>No data collected.</strong> nutrx does not collect, transmit, or store any data outside your device.</span>
+      </div>
+      <div class="summary-row">
+        <div class="summary-dot"></div>
+        <span><strong>No accounts.</strong> You never create an account or provide any personal information to us.</span>
+      </div>
+      <div class="summary-row">
+        <div class="summary-dot"></div>
+        <span><strong>No analytics.</strong> We have no telemetry, crash reporting, or usage tracking of any kind.</span>
+      </div>
+      <div class="summary-row">
+        <div class="summary-dot"></div>
+        <span><strong>No ads.</strong> nutrx is not ad-supported and never will be.</span>
+      </div>
+      <div class="summary-row">
+        <div class="summary-dot"></div>
+        <span><strong>No third-party SDKs.</strong> There are no third-party libraries or services embedded in the app.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full policy -->
+  <div class="prose">
+
+    <div class="prose-section">
+      <h2>Overview</h2>
+      <p>nutrx is a privacy-first iOS application for tracking daily nutrient intake. This policy explains how we handle your information — which, to be direct, we do not handle at all.</p>
+      <p>nutrx is built by nutrx Labs. We believe your health data is yours and yours alone. The app is designed from the ground up so that no data ever leaves your device, full stop.</p>
+    </div>
+
+    <div class="prose-section">
+      <h2>Data we collect</h2>
+      <p>None. nutrx does not collect any personal data, health data, usage data, or any other information from you or your device.</p>
+      <p>Everything you enter into nutrx — your nutrient entries, daily logs, personal profile, and history — is stored exclusively in the app's local SwiftData database on your iPhone or iPad. This data never leaves your device and is never accessible to us or any third party.</p>
+    </div>
+
+    <div class="prose-section">
+      <h2>Internet access</h2>
+      <p>nutrx does not require an internet connection and makes no network requests of any kind during normal use. The app functions entirely offline. There is no backend server, no API, and no cloud infrastructure associated with nutrx.</p>
+    </div>
+
+    <div class="prose-section">
+      <h2>Analytics and crash reporting</h2>
+      <p>nutrx contains no analytics, telemetry, event tracking, or crash reporting tools. We have no visibility into how you use the app, how often you open it, or whether it crashes. If you encounter a bug, please reach out to us directly via the <a href="support.html">support page</a>.</p>
+    </div>
+
+    <div class="prose-section">
+      <h2>Third-party services</h2>
+      <p>nutrx contains no third-party SDKs, advertising frameworks, or external services. The only software running in the app is code we wrote ourselves, built on Apple's native iOS frameworks.</p>
+    </div>
+
+    <div class="prose-section">
+      <h2>Data deletion</h2>
+      <p>Since all data is stored locally on your device, you are in full control of it at all times. To delete all nutrx data, simply delete the app from your device. There is no account to close, no server-side data to request deletion of, and no one to contact — because we never had your data to begin with.</p>
+    </div>
+
+    <div class="prose-section">
+      <h2>Children's privacy</h2>
+      <p>nutrx does not collect any information from anyone, including children under the age of 13. Because no data is collected or transmitted, nutrx is compliant with COPPA and similar regulations by design.</p>
+    </div>
+
+    <div class="prose-section">
+      <h2>Changes to this policy</h2>
+      <p>If we ever change how nutrx handles data — for example, if a future Pro feature introduces optional cloud sync — we will update this policy and clearly communicate the change before it takes effect. The current version date is always shown at the top of this page.</p>
+    </div>
+
+    <div class="prose-section">
+      <h2>Contact</h2>
+      <p>If you have any questions about this privacy policy or how nutrx works, you can reach us at <a href="mailto:support@nutrx-labs.com">support@nutrx-labs.com</a>. We're a small team and we read every message.</p>
+    </div>
+
+  </div>
+
+  <p class="footer-note">
+    © 2026 nutrx · <a href="/">Home</a> · <a href="support.html">Support</a>
+  </p>
+
+</main>
+
+</body>
+</html>
