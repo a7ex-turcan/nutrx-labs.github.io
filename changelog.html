@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's New — nutrx</title>
+  <meta name="description" content="See what's new in nutrx. Every update, every fix, every improvement.">
+  <link rel="icon" type="image/png" href="nutrx_icon_1024.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #F7F7F5;
+      --bg-white:   #FFFFFF;
+      --text:       #111111;
+      --text-2:     #6E6E73;
+      --text-3:     #AEAEB2;
+      --accent:     #007AFF;
+      --green:      #34C759;
+      --orange:     #FF9F0A;
+      --border:     rgba(0,0,0,0.07);
+      --border-med: rgba(0,0,0,0.12);
+      --display:    'Fraunces', Georgia, serif;
+      --sans:       'DM Sans', system-ui, sans-serif;
+      --r:          16px;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── NAV ─── */
+    .nav {
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px;
+      background: rgba(247,247,245,0.92);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-logo img {
+      width: 30px; height: 30px; border-radius: 7px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    }
+    .nav-logo-text {
+      font-family: var(--display);
+      font-size: 19px; font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+    .nav-back {
+      font-size: 14px; color: var(--accent);
+      text-decoration: none; font-weight: 400;
+      transition: opacity 0.18s;
+    }
+    .nav-back:hover { opacity: 0.65; }
+
+    /* ─── MAIN ─── */
+    .main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 80px 24px 120px;
+    }
+
+    .page-eyebrow {
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .page-title {
+      font-family: var(--display);
+      font-size: clamp(38px, 6vw, 56px);
+      font-weight: 400; line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    .page-intro {
+      font-size: 17px; font-weight: 300;
+      color: var(--text-2); line-height: 1.72;
+      margin-bottom: 72px;
+    }
+
+    /* ─── TIMELINE ─── */
+    .timeline {
+      position: relative;
+      display: flex; flex-direction: column;
+      gap: 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 15px; top: 8px; bottom: 0;
+      width: 1px;
+      background: var(--border-med);
+    }
+
+    /* ─── RELEASE ─── */
+    .release {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      gap: 0 24px;
+      padding-bottom: 56px;
+    }
+    .release:last-child { padding-bottom: 0; }
+
+    /* dot */
+    .release-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 2px solid var(--border-med);
+      margin-top: 6px;
+      position: relative;
+      z-index: 1;
+      justify-self: center;
+      transition: border-color 0.2s;
+    }
+    .release.latest .release-dot {
+      background: var(--accent);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0,122,255,0.15);
+    }
+
+    /* header */
+    .release-header {
+      display: flex; align-items: center;
+      gap: 12px; margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .release-version {
+      font-family: var(--display);
+      font-size: 22px; font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+    .release-date {
+      font-size: 13px; font-weight: 400;
+      color: var(--text-3);
+    }
+    .release-badge {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 100px;
+    }
+    .badge-latest {
+      background: rgba(0,122,255,0.1);
+      color: var(--accent);
+    }
+
+    /* groups */
+    .change-groups {
+      display: flex; flex-direction: column; gap: 20px;
+    }
+
+    .change-group-label {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .label-features { color: var(--accent); }
+    .label-improvements { color: var(--green); }
+    .label-fixes { color: var(--orange); }
+
+    .change-list {
+      display: flex; flex-direction: column; gap: 10px;
+    }
+
+    .change-item {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 18px;
+      display: flex; gap: 14px; align-items: flex-start;
+    }
+
+    .change-icon {
+      width: 28px; height: 28px; flex-shrink: 0;
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .change-icon svg { width: 14px; height: 14px; }
+    .icon-feature { background: rgba(0,122,255,0.08); }
+    .icon-improvement { background: rgba(52,199,89,0.1); }
+    .icon-fix { background: rgba(255,159,10,0.1); }
+
+    .change-text { flex: 1; }
+    .change-title {
+      font-size: 14px; font-weight: 500;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .change-desc {
+      font-size: 13.5px; font-weight: 300;
+      color: var(--text-2); line-height: 1.58;
+    }
+
+    /* ─── FOOTER ─── */
+    .footer-note {
+      margin-top: 72px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      font-size: 13px; color: var(--text-3);
+      text-align: center;
+    }
+    .footer-note a { color: var(--text-2); text-decoration: none; }
+    .footer-note a:hover { color: var(--text); }
+
+    @media (max-width: 600px) {
+      .nav { padding: 0 24px; }
+      .main { padding: 48px 24px 80px; }
+      .timeline::before { left: 11px; }
+      .release { grid-template-columns: 24px 1fr; gap: 0 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <a href="/" class="nav-logo">
+    <img src="nutrx_icon_1024.png" alt="nutrx">
+    <span class="nav-logo-text">nutrx</span>
+  </a>
+  <a href="/" class="nav-back">← Back</a>
+</header>
+
+<main class="main">
+
+  <p class="page-eyebrow">What's New</p>
+  <h1 class="page-title">Every update,<br>documented.</h1>
+  <p class="page-intro">nutrx ships fast and improves constantly. Here's everything that's changed, version by version.</p>
+
+  <div class="timeline">
+
+    <!-- ── v1.0 ── -->
+    <div class="release latest">
+      <div class="release-dot"></div>
+      <div class="release-body">
+        <div class="release-header">
+          <span class="release-version">v1.0</span>
+          <span class="release-date">20 Mar 2026</span>
+          <span class="release-badge badge-latest">Current</span>
+        </div>
+        <div class="change-groups">
+          <div>
+            <p class="change-group-label label-features">Features</p>
+            <div class="change-list">
+
+              <div class="change-item">
+                <div class="change-icon icon-feature">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">Onboarding</p>
+                  <p class="change-desc">A two-step setup flow — personal info first, then your first nutrient. The app is never empty on day one.</p>
+                </div>
+              </div>
+
+              <div class="change-item">
+                <div class="change-icon icon-feature">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">User-defined nutrients</p>
+                  <p class="change-desc">No preset list. Create any nutrient with a custom name, unit, step size, and daily target.</p>
+                </div>
+              </div>
+
+              <div class="change-item">
+                <div class="change-icon icon-feature">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">Today, My Nutrients & History tabs</p>
+                  <p class="change-desc">The core three-tab layout. Log intake with +/−, manage your list, and browse every past day.</p>
+                </div>
+              </div>
+
+              <div class="change-item">
+                <div class="change-icon icon-feature">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">Fully offline & private</p>
+                  <p class="change-desc">All data stored locally via SwiftData. No accounts, no servers, no telemetry — ever.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="footer-note">
+    © 2026 nutrx · <a href="/">Home</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a>
+  </p>
+
+</main>
+
+</body>
+</html>

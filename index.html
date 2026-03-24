@@ -155,6 +155,17 @@
       color: var(--text-2);
       font-weight: 500;
     }
+    .whats-new-link {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 12px; font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      border-bottom: 1px solid rgba(0,122,255,0.25);
+      transition: border-color 0.18s, opacity 0.18s;
+      margin-left: 6px;
+    }
+    .whats-new-link:hover { border-color: var(--accent); opacity: 0.75; }
 
     .hero-scroll {
       margin-top: 64px;
@@ -459,7 +470,7 @@
     <a href="https://apps.apple.com/us/app/nutrx/id6760843478?itscg=30200&itsct=apps_box_badge&mttnsubad=6760843478" style="display: inline-block;">
     <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1774224000" alt="Download on the App Store" style="width: 246px; height: 82px; vertical-align: middle; object-fit: contain;" />
     </a>
-    <p class="version-tag">Current version: <span>v1.0</span> · Health &amp; Fitness · Free</p>
+    <p class="version-tag">v1.0 · Health &amp; Fitness · Free<a href="changelog.html" class="whats-new-link">What's new ↗</a></p>
   </div>
   <div class="hero-scroll fu" aria-hidden="true">
     <div class="scroll-line"></div>
@@ -621,7 +632,7 @@
     <a href="https://apps.apple.com/us/app/nutrx/id6760843478?itscg=30200&itsct=apps_box_badge&mttnsubad=6760843478" style="display: inline-block;">
     <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1774224000" alt="Download on the App Store" style="width: 246px; height: 82px; vertical-align: middle; object-fit: contain;" />
     </a>
-    <p class="version-tag">Current version: <span>v1.0</span> · Health &amp; Fitness · Free</p>
+    <p class="version-tag">v1.0 · Health &amp; Fitness · Free<a href="changelog.html" class="whats-new-link">What's new ↗</a></p>
   </div>
 </section>
 
@@ -632,6 +643,7 @@
     <p>© 2026 nutrx. All rights reserved.</p>
     <div class="footer-links">
       <a href="privacy.html">Privacy Policy</a>
+      <a href="changelog.html">What's New</a>
       <a href="support.html">Support</a>
       <a href="https://github.com/a7ex-turcan/nutrx" target="_blank" rel="noopener">GitHub</a>
     </div>
