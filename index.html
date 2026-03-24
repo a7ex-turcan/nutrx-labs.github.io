@@ -105,14 +105,10 @@
       margin-bottom: 28px;
       letter-spacing: 0.01em;
     }
-    .pulse-dot {
+    .badge-dot {
       width: 7px; height: 7px;
       background: var(--green); border-radius: 50%;
-      animation: pulse 2.2s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.8); }
+      flex-shrink: 0;
     }
     .hero h1 {
       font-family: var(--display);
@@ -132,8 +128,34 @@
       color: var(--text-2);
       max-width: 460px;
       line-height: 1.68;
-      margin-bottom: 44px;
+      margin-bottom: 40px;
     }
+
+    /* ─── APP STORE BUTTON ─── */
+    .hero-cta {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 14px;
+      margin-bottom: 0;
+    }
+    .appstore-btn {
+      display: inline-block;
+      transition: opacity 0.18s, transform 0.18s;
+    }
+    .appstore-btn:hover { opacity: 0.82; transform: scale(0.98); }
+    .appstore-btn img {
+      height: 52px; width: auto;
+      display: block;
+    }
+    .version-tag {
+      font-size: 12px; font-weight: 400;
+      color: var(--text-3);
+      letter-spacing: 0.04em;
+    }
+    .version-tag span {
+      color: var(--text-2);
+      font-weight: 500;
+    }
+
     .hero-scroll {
       margin-top: 64px;
       display: flex; flex-direction: column; align-items: center; gap: 8px;
@@ -237,9 +259,7 @@
       margin-bottom: 8px;
     }
     .nbar { height: 100%; border-radius: 2px; }
-    .ncard-btns {
-      display: flex; justify-content: space-between;
-    }
+    .ncard-btns { display: flex; justify-content: space-between; }
     .nbtn {
       width: 24px; height: 24px;
       background: #F2F2F7; border-radius: 50%;
@@ -337,55 +357,29 @@
       font-weight: 400; letter-spacing: 0.01em;
     }
 
-    /* ─── NOTIFY ─── */
-    .notify-section {
+    /* ─── DOWNLOAD CTA ─── */
+    .download-section {
       padding: 110px 40px;
       text-align: center;
     }
-    .notify-section h2 {
+    .download-section h2 {
       font-family: var(--display);
       font-size: clamp(38px, 5vw, 58px);
       font-weight: 400; line-height: 1.1;
       letter-spacing: -0.03em;
       margin-bottom: 16px;
     }
-    .notify-section > p {
+    .download-section > p {
       font-size: 17px; font-weight: 300;
       color: var(--text-2);
       margin-bottom: 40px;
     }
-    .notify-form {
-      display: flex; gap: 10px;
-      justify-content: center;
-      max-width: 400px; margin: 0 auto;
+    .download-cta {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 14px;
     }
-    .notify-form input {
-      flex: 1;
-      padding: 12px 18px;
-      border: 1px solid var(--border-med);
-      border-radius: 100px;
-      font-family: var(--sans); font-size: 15px;
-      background: var(--bg-white); outline: none;
-      transition: border-color 0.18s, box-shadow 0.18s;
-      color: var(--text);
-    }
-    .notify-form input::placeholder { color: var(--text-3); }
-    .notify-form input:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(0,122,255,0.12);
-    }
-    .notify-form button {
-      background: var(--text); color: white;
-      border: none; cursor: pointer;
-      padding: 12px 22px; border-radius: 100px;
-      font-family: var(--sans); font-size: 15px; font-weight: 500;
-      transition: opacity 0.18s; white-space: nowrap;
-    }
-    .notify-form button:hover { opacity: 0.75; }
-    .notify-thanks {
-      display: none;
-      color: var(--green);
-      font-size: 15px; margin-top: 20px;
+    .download-cta .version-tag {
+      font-size: 12px; color: var(--text-3);
     }
 
     /* ─── FOOTER ─── */
@@ -426,9 +420,7 @@
       .feat-grid { grid-template-columns: 1fr; gap: 16px; }
       .features { padding: 60px 24px 80px; }
       .privacy { padding: 80px 24px; }
-      .notify-section { padding: 80px 24px; }
-      .notify-form { flex-direction: column; }
-      .notify-form input, .notify-form button { width: 100%; }
+      .download-section { padding: 80px 24px; }
       .footer {
         flex-direction: column; gap: 16px;
         padding: 28px 24px; text-align: center;
@@ -450,7 +442,7 @@
     <img src="nutrx_icon_1024.png" alt="nutrx app icon">
     <span class="nav-logo-text">nutrx</span>
   </a>
-  <a href="#notify" class="nav-btn">Get notified</a>
+  <a href="https://apps.apple.com/us/app/nutrx/id6760843478" target="_blank" rel="noopener" class="nav-btn">Download</a>
 </header>
 
 
@@ -458,11 +450,17 @@
 <section class="hero">
   <img src="nutrx_icon_1024.png" alt="nutrx" class="hero-icon fu">
   <div class="hero-badge fu">
-    <span class="pulse-dot"></span>
-    In development · App Store launch coming soon
+    <span class="badge-dot"></span>
+    Available on the App Store · Free
   </div>
   <h1 class="fu">Track what <em>matters.</em><br>Nothing else.</h1>
   <p class="hero-sub fu">nutrx is a privacy-first iOS app for logging your daily nutrient intake. Define your own nutrients, hit your targets, stay on track — without giving up a single byte of your data.</p>
+  <div class="hero-cta fu">
+    <a href="https://apps.apple.com/us/app/nutrx/id6760843478?itscg=30200&itsct=apps_box_badge&mttnsubad=6760843478" style="display: inline-block;">
+    <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1774224000" alt="Download on the App Store" style="width: 246px; height: 82px; vertical-align: middle; object-fit: contain;" />
+    </a>
+    <p class="version-tag">Current version: <span>v1.0</span> · Health &amp; Fitness · Free</p>
+  </div>
   <div class="hero-scroll fu" aria-hidden="true">
     <div class="scroll-line"></div>
     <span>Scroll</span>
@@ -487,7 +485,6 @@
             <span class="screen-hd-date">Mon, 16 Mar</span>
           </div>
 
-          <!-- Vitamin D – in progress -->
           <div class="ncard">
             <div class="ncard-row">
               <span class="ncard-name">Vitamin D</span>
@@ -497,7 +494,6 @@
             <div class="ncard-btns"><div class="nbtn">−</div><div class="nbtn">+</div></div>
           </div>
 
-          <!-- Magnesium – complete -->
           <div class="ncard">
             <div class="ncard-row">
               <span class="ncard-name">Magnesium</span>
@@ -507,7 +503,6 @@
             <div class="ncard-btns"><div class="nbtn">−</div><div class="nbtn">+</div></div>
           </div>
 
-          <!-- Caffeine – exceeded -->
           <div class="ncard">
             <div class="ncard-row">
               <span class="ncard-name">Caffeine</span>
@@ -517,7 +512,6 @@
             <div class="ncard-btns"><div class="nbtn">−</div><div class="nbtn">+</div></div>
           </div>
 
-          <!-- Omega-3 – in progress -->
           <div class="ncard">
             <div class="ncard-row">
               <span class="ncard-name">Omega‑3</span>
@@ -619,15 +613,16 @@
 </section>
 
 
-<!-- ── NOTIFY ── -->
-<section class="notify-section" id="notify">
-  <h2 class="fu">Be the first to know.</h2>
-  <p class="fu">nutrx is launching on the App Store soon. Leave your email and we'll ping you the moment it's live.</p>
-  <form class="notify-form fu" id="notifyForm">
-    <input type="email" name="email" placeholder="your@email.com" required autocomplete="email">
-    <button type="submit">Notify me</button>
-  </form>
-  <p class="notify-thanks" id="notifyThanks">You're on the list. Talk soon! 🎉</p>
+<!-- ── DOWNLOAD CTA ── -->
+<section class="download-section">
+  <h2 class="fu">Start tracking today.</h2>
+  <p class="fu">Free to download. No account. No setup. Just open it and start.</p>
+  <div class="download-cta fu">
+    <a href="https://apps.apple.com/us/app/nutrx/id6760843478?itscg=30200&itsct=apps_box_badge&mttnsubad=6760843478" style="display: inline-block;">
+    <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1774224000" alt="Download on the App Store" style="width: 246px; height: 82px; vertical-align: middle; object-fit: contain;" />
+    </a>
+    <p class="version-tag">Current version: <span>v1.0</span> · Health &amp; Fitness · Free</p>
+  </div>
 </section>
 
 
@@ -647,10 +642,9 @@
 <script>
   // ── Scroll-in animations ──
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        const delay = entry.target.closest('.feat-grid') ? i * 70 : 0;
-        setTimeout(() => entry.target.classList.add('in'), delay);
+        entry.target.classList.add('in');
         observer.unobserve(entry.target);
       }
     });
@@ -658,7 +652,7 @@
 
   document.querySelectorAll('.fu').forEach(el => observer.observe(el));
 
-  // Stagger feature cards separately
+  // Stagger feature cards
   document.querySelectorAll('.feat').forEach((el, i) => {
     const cardObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -669,32 +663,6 @@
       });
     }, { threshold: 0.1 });
     cardObserver.observe(el);
-  });
-
-  // ── Notify form ──
-  document.getElementById('notifyForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const form = this;
-    const btn = form.querySelector('button');
-    btn.textContent = 'Sending…';
-    btn.disabled = true;
-    try {
-      const res = await fetch('https://formspree.io/f/mreyjklg', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: form.querySelector('input[type="email"]').value })
-      });
-      if (res.ok) {
-        form.style.display = 'none';
-        document.getElementById('notifyThanks').style.display = 'block';
-      } else {
-        btn.textContent = 'Try again';
-        btn.disabled = false;
-      }
-    } catch {
-      btn.textContent = 'Try again';
-      btn.disabled = false;
-    }
   });
 
   // ── Smooth nav on scroll ──
