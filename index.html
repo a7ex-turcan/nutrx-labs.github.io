@@ -393,6 +393,66 @@
       font-size: 12px; color: var(--text-3);
     }
 
+    /* ─── NEWSLETTER ─── */
+    .newsletter {
+      padding: 80px 40px;
+      border-top: 1px solid var(--border);
+    }
+    .newsletter-inner {
+      max-width: 1080px; margin: 0 auto;
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 48px;
+    }
+    .newsletter-text h3 {
+      font-family: var(--display);
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 400; line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .newsletter-text p {
+      font-size: 15px; font-weight: 300;
+      color: var(--text-2); line-height: 1.6;
+    }
+    .newsletter-form {
+      display: flex; gap: 10px;
+      flex-shrink: 0;
+    }
+    .newsletter-form input {
+      width: 240px;
+      padding: 11px 18px;
+      border: 1px solid var(--border-med);
+      border-radius: 100px;
+      font-family: var(--sans); font-size: 14px;
+      background: var(--bg-white); outline: none;
+      transition: border-color 0.18s, box-shadow 0.18s;
+      color: var(--text);
+    }
+    .newsletter-form input::placeholder { color: var(--text-3); }
+    .newsletter-form input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0,122,255,0.12);
+    }
+    .newsletter-form button {
+      background: var(--text); color: white;
+      border: none; cursor: pointer;
+      padding: 11px 20px; border-radius: 100px;
+      font-family: var(--sans); font-size: 14px; font-weight: 500;
+      transition: opacity 0.18s; white-space: nowrap;
+    }
+    .newsletter-form button:hover { opacity: 0.75; }
+    .newsletter-thanks {
+      display: none;
+      font-size: 14px; color: var(--green);
+      font-weight: 400; flex-shrink: 0;
+    }
+    @media (max-width: 768px) {
+      .newsletter { padding: 60px 24px; }
+      .newsletter-inner { flex-direction: column; gap: 28px; align-items: flex-start; }
+      .newsletter-form { width: 100%; }
+      .newsletter-form input { flex: 1; width: auto; }
+    }
+
     /* ─── FOOTER ─── */
     .footer {
       padding: 32px 40px;
@@ -637,6 +697,22 @@
 </section>
 
 
+<!-- ── NEWSLETTER ── -->
+<section class="newsletter">
+  <div class="newsletter-inner">
+    <div class="newsletter-text fu">
+      <h3>Stay in the loop.</h3>
+      <p>New features, updates, and the occasional behind-the-scenes note.<br>No spam. Unsubscribe any time.</p>
+    </div>
+    <form class="newsletter-form fu" id="newsletterForm">
+      <input type="email" name="email" placeholder="your@email.com" required autocomplete="email">
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="newsletter-thanks" id="newsletterThanks">You're in! 🎉</p>
+  </div>
+</section>
+
+
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer">
@@ -684,6 +760,33 @@
       ? 'rgba(247,247,245,0.95)'
       : 'rgba(247,247,245,0.82)';
   }, { passive: true });
+
+  // ── Newsletter form ──
+  document.getElementById('newsletterForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = this;
+    const btn = form.querySelector('button');
+    const email = form.querySelector('input[type="email"]').value;
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    try {
+      const res = await fetch('https://formspree.io/f/mreyjklg', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email })
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        document.getElementById('newsletterThanks').style.display = 'block';
+      } else {
+        btn.textContent = 'Try again';
+        btn.disabled = false;
+      }
+    } catch (err) {
+      btn.textContent = 'Try again';
+      btn.disabled = false;
+    }
+  });
 </script>
 
 </body>
