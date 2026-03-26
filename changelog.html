@@ -35,6 +35,7 @@
       display: flex; flex-direction: column;
       gap: 0;
     }
+    .timeline.timeline--status::before { display: none; }
 
     .timeline::before {
       content: '';
@@ -42,6 +43,27 @@
       left: 15px; top: 8px; bottom: 0;
       width: 1px;
       background: var(--border-med);
+    }
+
+    .timeline-status {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 24px 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    }
+    .timeline-status-title {
+      font-family: var(--display);
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .timeline-status-copy {
+      font-size: 14.5px;
+      font-weight: 300;
+      color: var(--text-2);
+      line-height: 1.7;
     }
 
     /* ─── RELEASE ─── */
@@ -180,538 +202,7 @@
   <h1 class="page-title">Every update,<br>documented.</h1>
   <p class="page-intro">nutrx ships fast and improves constantly. Here's everything that's changed, version by version.</p>
 
-  <div class="timeline">
-
-    <!-- ── v1.5 ── -->
-    <div class="release latest">
-      <div class="release-dot"></div>
-      <div class="release-body">
-        <div class="release-header">
-          <span class="release-version">v1.5</span>
-          <span class="release-date">26 Mar 2026</span>
-          <span class="release-badge badge-latest">Current</span>
-        </div>
-        <div class="change-groups">
-          <div>
-            <p class="change-group-label label-features">Features</p>
-            <div class="change-list">
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Streaks &amp; consistency tracking</p>
-                  <p class="change-desc">Track your daily completion streak across Today, History, and widgets. A streak day counts when all active nutrients met their targets, respecting exclusions and creation dates.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Streak summary in History</p>
-                  <p class="change-desc">Current streak and best streak shown in a summary card at the top of the History tab, with flame indicators on individual streak days.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Streak in widgets</p>
-                  <p class="change-desc">Small and medium home screen widgets now show your current streak count when active.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Streaks settings page</p>
-                  <p class="change-desc">Dedicated Settings → Streaks page with a "Track streaks" toggle (on by default). Designed for future streak-related settings.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <div>
-            <p class="change-group-label label-improvements">Improvements</p>
-            <div class="change-list">
-
-              <div class="change-item">
-                <div class="change-icon icon-improvement">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#34C759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Tighter Settings layout</p>
-                  <p class="change-desc">Settings items grouped into fewer sections for a more compact, standard iOS look.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-improvement">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#34C759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Hidden group headers when only General</p>
-                  <p class="change-desc">If no custom groups are defined, group headers are hidden on Today and My Nutrients for a cleaner, minimal look.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── v1.4 ── -->
-    <div class="release">
-      <div class="release-dot"></div>
-      <div class="release-body">
-        <div class="release-header">
-          <span class="release-version">v1.4</span>
-          <span class="release-date">24 Mar 2026</span>
-        </div>
-        <div class="change-groups">
-          <div>
-            <p class="change-group-label label-features">Features</p>
-            <div class="change-list">
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Home screen widgets</p>
-                  <p class="change-desc">Three sizes (small, medium, large) showing your daily nutrient progress with interactive + buttons to log directly from your home screen.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Lock screen widgets</p>
-                  <p class="change-desc">Circular ring gauge and inline text widget showing your daily completion count at a glance — no unlock needed.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Shared data via App Groups</p>
-                  <p class="change-desc">Widgets read from the same SwiftData store as the main app via a shared container. Existing data migrates automatically on first launch.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <div>
-            <p class="change-group-label label-improvements">Improvements</p>
-            <div class="change-list">
-
-              <div class="change-item">
-                <div class="change-icon icon-improvement">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#34C759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Instant widget refresh</p>
-                  <p class="change-desc">Widgets update immediately after logging (via + button or in-app) and on every app foreground.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-improvement">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#34C759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Date in navigation bar</p>
-                  <p class="change-desc">The Today screen now shows the current date (e.g. "Tuesday, 24 March") instead of a static title.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── v1.3 ── -->
-    <div class="release">
-      <div class="release-dot"></div>
-      <div class="release-body">
-        <div class="release-header">
-          <span class="release-version">v1.3</span>
-          <span class="release-date">23 Mar 2026</span>
-        </div>
-        <div class="change-groups">
-          <div>
-            <p class="change-group-label label-improvements">Improvements</p>
-            <div class="change-list">
-
-              <div class="change-item">
-                <div class="change-icon icon-improvement">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#34C759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Completion count in group headers</p>
-                  <p class="change-desc">Collapsed and expanded group headers now show how many nutrients have hit their daily target (e.g. "2 / 5").</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-improvement">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#34C759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Inline group creation</p>
-                  <p class="change-desc">Create a new group directly from the nutrient form's group picker — no need to leave the screen.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-improvement">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#34C759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Haptic feedback</p>
-                  <p class="change-desc">Subtle haptic feedback on +/− buttons for a more tactile logging experience.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-improvement">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#34C759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Tighter group spacing</p>
-                  <p class="change-desc">Reduced section spacing between groups on the Today screen for a more compact layout.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-improvement">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#34C759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Notes in reminders</p>
-                  <p class="change-desc">Nutrient reminders now include the nutrient's note as the notification body when one is set.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <div>
-            <p class="change-group-label label-fixes">Fixes</p>
-            <div class="change-list">
-
-              <div class="change-item">
-                <div class="change-icon icon-fix">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#FF9F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Reminders not firing</p>
-                  <p class="change-desc">Fixed nutrient reminders not triggering due to an async race condition in notification scheduling.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-fix">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#FF9F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Comma decimal separator</p>
-                  <p class="change-desc">Fixed decimal input not working on devices using comma separators (e.g. entering "0,5" as a step value).</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-fix">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#FF9F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Number display precision</p>
-                  <p class="change-desc">Fixed values truncating to 1 decimal place — now shows up to 2 (e.g. "0.25").</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── v1.2 ── -->
-    <div class="release">
-      <div class="release-dot"></div>
-      <div class="release-body">
-        <div class="release-header">
-          <span class="release-version">v1.2</span>
-          <span class="release-date">21 Mar 2026</span>
-        </div>
-        <div class="change-groups">
-          <div>
-            <p class="change-group-label label-features">Features</p>
-            <div class="change-list">
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Nutrient grouping</p>
-                  <p class="change-desc">Organise nutrients into named groups (e.g. Vitamins, Supplements). Groups are collapsible on both Today and My Nutrients, with an aggregate progress bar when collapsed.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Manage Groups</p>
-                  <p class="change-desc">New screen in Settings for creating, renaming, reordering, and deleting groups. A default "General" group is created automatically.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 9 2 12 5 15"/><polyline points="9 5 12 2 15 5"/><polyline points="15 19 12 22 9 19"/><polyline points="19 9 22 12 19 15"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Move to Group</p>
-                  <p class="change-desc">Long-press any nutrient on Today or My Nutrients to quickly move it to a different group.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Group picker on create</p>
-                  <p class="change-desc">When adding a nutrient, a group picker lets you assign it to a group right away (defaults to General).</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── v1.1 ── -->
-    <div class="release">
-      <div class="release-dot"></div>
-      <div class="release-body">
-        <div class="release-header">
-          <span class="release-version">v1.1</span>
-          <span class="release-date">21 Mar 2026</span>
-        </div>
-        <div class="change-groups">
-          <div>
-            <p class="change-group-label label-features">Features</p>
-            <div class="change-list">
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Per-nutrient dose reminders</p>
-                  <p class="change-desc">Set multiple daily reminders per nutrient (e.g. Aspirin at 9 AM, noon, and 8 PM). Smart suppression cancels upcoming reminders after you log intake.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Nutrient notes</p>
-                  <p class="change-desc">Optional free-form text field on each nutrient. Shown as a muted line below the nutrient name on the Today card.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Monthly section headers in History</p>
-                  <p class="change-desc">Day entries grouped under sticky month headers (e.g. "March, 2026") for easier navigation.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Swipe actions on Today</p>
-                  <p class="change-desc">Swipe right to add an exact amount, swipe left to edit a nutrient — right from the Today screen.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Custom amount notes</p>
-                  <p class="change-desc">Add an optional note when logging an exact amount. Notes are visible in the History intake detail.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Settings page</p>
-                  <p class="change-desc">New Settings screen with a Notifications toggle and About section. Access it from the profile menu.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Daily check-in reminder</p>
-                  <p class="change-desc">Opt-in local notification at noon if you haven't logged anything that day. Smart scheduling adjusts based on your activity.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Notification prompt banner</p>
-                  <p class="change-desc">Dismissible banner on the Today screen prompting you to enable the daily reminder. Shown once after onboarding.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <div>
-            <p class="change-group-label label-fixes">Fixes</p>
-            <div class="change-list">
-
-              <div class="change-item">
-                <div class="change-icon icon-fix">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#FF9F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Migration crash fix</p>
-                  <p class="change-desc">Fixed a SwiftData migration crash when the notification banner preference was added without a property-level default.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-fix">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#FF9F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Notification permission prompt</p>
-                  <p class="change-desc">Fixed the permission prompt being swallowed when triggered from within a sheet.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-fix">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#FF9F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Stale reminder list</p>
-                  <p class="change-desc">Fixed reminder list and count not refreshing after adding a new reminder.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-fix">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#FF9F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">"Add Reminder" button visibility</p>
-                  <p class="change-desc">Fixed the button being hidden behind the date picker by switching to a compact picker layout.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── v1.0 ── -->
-    <div class="release">
-      <div class="release-dot"></div>
-      <div class="release-body">
-        <div class="release-header">
-          <span class="release-version">v1.0</span>
-          <span class="release-date">20 Mar 2026</span>
-        </div>
-        <div class="change-groups">
-          <div>
-            <p class="change-group-label label-features">Features</p>
-            <div class="change-list">
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Onboarding</p>
-                  <p class="change-desc">A two-step setup flow — personal info first, then your first nutrient. The app is never empty on day one.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">User-defined nutrients</p>
-                  <p class="change-desc">No preset list. Create any nutrient with a custom name, unit, step size, and daily target.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Today, My Nutrients & History tabs</p>
-                  <p class="change-desc">The core three-tab layout. Log intake with +/−, manage your list, and browse every past day.</p>
-                </div>
-              </div>
-
-              <div class="change-item">
-                <div class="change-icon icon-feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                </div>
-                <div class="change-text">
-                  <p class="change-title">Fully offline & private</p>
-                  <p class="change-desc">All data stored locally via SwiftData. No accounts, no servers, no telemetry — ever.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
+  <div class="timeline" id="timeline"></div>
 
   <p class="footer-note">
     © 2026 nutrx · <a href="/">Home</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a>
@@ -720,6 +211,148 @@
 </main>
 
 <script src="assets/site.js"></script>
+<script>
+  const timeline = document.getElementById('timeline');
+  const TYPE_CONFIG = {
+    features:     { label: 'Features',     labelClass: 'label-features',     iconClass: 'icon-feature',     stroke: '#007AFF' },
+    improvements: { label: 'Improvements', labelClass: 'label-improvements', iconClass: 'icon-improvement', stroke: '#34C759' },
+    fixes:        { label: 'Fixes',        labelClass: 'label-fixes',        iconClass: 'icon-fix',         stroke: '#FF9F0A' }
+  };
+  const FALLBACK_ICONS = {
+    features: '<path d="M12 5v14"/><path d="M5 12h14"/>',
+    improvements: '<polyline points="4 14 9 9 13 13 20 6"/>',
+    fixes: '<path d="M20 6L9 17l-5-5"/>'
+  };
+
+  function buildSvg(inner, stroke) {
+    return `<svg viewBox="0 0 24 24" fill="none" stroke="${stroke}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`;
+  }
+
+  function escapeHtml(value) {
+    return String(value ?? '').replace(/[&<>"']/g, (char) => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    }[char]));
+  }
+
+  function compareVersions(a, b) {
+    const partsA = String(a.version ?? '').split('.').map(Number);
+    const partsB = String(b.version ?? '').split('.').map(Number);
+    const length = Math.max(partsA.length, partsB.length);
+
+    for (let i = 0; i < length; i += 1) {
+      const diff = (partsB[i] || 0) - (partsA[i] || 0);
+      if (diff !== 0) return diff;
+    }
+
+    return 0;
+  }
+
+  function normalizeItems(items) {
+    if (!Array.isArray(items)) return [];
+
+    return items
+      .filter((item) => item && item.title)
+      .map((item) => ({
+        title: escapeHtml(item.title),
+        desc: escapeHtml(item.desc ?? item.description ?? ''),
+        icon: typeof item.icon === 'string' && item.icon.trim() ? item.icon : null
+      }));
+  }
+
+  function normalizeReleases(payload) {
+    const releases = Array.isArray(payload) ? payload : payload?.releases;
+    if (!Array.isArray(releases)) return [];
+
+    return releases
+      .filter((release) => release && release.version && release.date)
+      .map((release) => ({
+        version: String(release.version),
+        date: escapeHtml(release.date),
+        features: normalizeItems(release.features),
+        improvements: normalizeItems(release.improvements),
+        fixes: normalizeItems(release.fixes)
+      }))
+      .sort(compareVersions);
+  }
+
+  function renderStatus(title, copy) {
+    timeline.classList.add('timeline--status');
+    timeline.innerHTML = `<div class="timeline-status">
+      <p class="timeline-status-title">${escapeHtml(title)}</p>
+      <p class="timeline-status-copy">${escapeHtml(copy)}</p>
+    </div>`;
+  }
+
+  function renderItem(item, type) {
+    const cfg = TYPE_CONFIG[type];
+    const icon = item.icon || FALLBACK_ICONS[type];
+    return `<div class="change-item">
+      <div class="change-icon ${cfg.iconClass}">${buildSvg(icon, cfg.stroke)}</div>
+      <div class="change-text">
+        <p class="change-title">${item.title}</p>
+        <p class="change-desc">${item.desc}</p>
+      </div>
+    </div>`;
+  }
+
+  function renderGroup(items, type) {
+    if (!items || !items.length) return '';
+    const cfg = TYPE_CONFIG[type];
+    return `<div>
+      <p class="change-group-label ${cfg.labelClass}">${cfg.label}</p>
+      <div class="change-list">${items.map(i => renderItem(i, type)).join('')}</div>
+    </div>`;
+  }
+
+  function renderRelease(release, isLatest) {
+    const badge = isLatest ? '<span class="release-badge badge-latest">Current</span>' : '';
+    const groups = ['features', 'improvements', 'fixes'].map(t => renderGroup(release[t], t)).join('');
+    return `<div class="release${isLatest ? ' latest' : ''}">
+      <div class="release-dot"></div>
+      <div class="release-body">
+        <div class="release-header">
+          <span class="release-version">v${release.version}</span>
+          <span class="release-date">${release.date}</span>
+          ${badge}
+        </div>
+        <div class="change-groups">${groups}</div>
+      </div>
+    </div>`;
+  }
+
+  async function loadChangelog() {
+    renderStatus('Loading changelog…', 'Fetching the latest release notes.');
+
+    try {
+      const response = await fetch('changelog.json', { cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+      const payload = await response.json();
+      const releases = normalizeReleases(payload);
+
+      if (!releases.length) {
+        renderStatus('No release notes yet', 'Add entries to changelog.json to populate this page.');
+        return;
+      }
+
+      timeline.classList.remove('timeline--status');
+      timeline.innerHTML = releases.map((release, index) => renderRelease(release, index === 0)).join('');
+    } catch (error) {
+      const message = window.location.protocol === 'file:'
+        ? 'Open this page through a local web server like python3 -m http.server because browsers block JSON fetches from file URLs.'
+        : 'The changelog data could not be loaded right now. Check changelog.json and try again.';
+
+      console.error('Failed to load changelog:', error);
+      renderStatus('Unable to load changelog', message);
+    }
+  }
+
+  loadChangelog();
+</script>
 
 </body>
 </html>
