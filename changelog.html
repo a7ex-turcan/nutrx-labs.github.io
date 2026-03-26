@@ -41,11 +41,15 @@
 
     /* ─── NAV ─── */
     .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
       height: 64px;
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 40px;
       background: rgba(247,247,245,0.92);
       backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
       border-bottom: 1px solid var(--border);
     }
     .nav-logo {
@@ -121,7 +125,7 @@
     .main {
       max-width: 680px;
       margin: 0 auto;
-      padding: 80px 24px 120px;
+      padding: 144px 24px 120px;
     }
 
     .page-eyebrow {
@@ -309,7 +313,7 @@
         text-align: left;
       }
       .nav-toggle { display: inline-flex; }
-      .main { padding: 48px 24px 80px; }
+      .main { padding: 112px 24px 80px; }
       .timeline::before { left: 11px; }
       .release { grid-template-columns: 24px 1fr; gap: 0 16px; }
     }
