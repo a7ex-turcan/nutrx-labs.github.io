@@ -1,0 +1,241 @@
+[
+  {
+    "version": "1.5",
+    "date": "26 Mar 2026",
+    "features": [
+      {
+        "title": "Streaks & consistency tracking",
+        "desc": "Track your daily completion streak across Today, History, and widgets. A streak day counts when all active nutrients met their targets, respecting exclusions and creation dates.",
+        "icon": "<path d=\"M13 2L3 14h9l-1 8 10-12h-9l1-8z\"/>"
+      },
+      {
+        "title": "Streak summary in History",
+        "desc": "Current streak and best streak shown in a summary card at the top of the History tab, with flame indicators on individual streak days.",
+        "icon": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\"/><line x1=\"16\" y1=\"2\" x2=\"16\" y2=\"6\"/><line x1=\"8\" y1=\"2\" x2=\"8\" y2=\"6\"/><line x1=\"3\" y1=\"10\" x2=\"21\" y2=\"10\"/>"
+      },
+      {
+        "title": "Streak in widgets",
+        "desc": "Small and medium home screen widgets now show your current streak count when active.",
+        "icon": "<rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"/>"
+      },
+      {
+        "title": "Streaks settings page",
+        "desc": "Dedicated Settings → Streaks page with a \"Track streaks\" toggle (on by default). Designed for future streak-related settings.",
+        "icon": "<circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z\"/>"
+      }
+    ],
+    "improvements": [
+      {
+        "title": "Tighter Settings layout",
+        "desc": "Settings items grouped into fewer sections for a more compact, standard iOS look.",
+        "icon": "<line x1=\"8\" y1=\"6\" x2=\"21\" y2=\"6\"/><line x1=\"8\" y1=\"12\" x2=\"21\" y2=\"12\"/><line x1=\"8\" y1=\"18\" x2=\"21\" y2=\"18\"/><line x1=\"3\" y1=\"6\" x2=\"3.01\" y2=\"6\"/><line x1=\"3\" y1=\"12\" x2=\"3.01\" y2=\"12\"/><line x1=\"3\" y1=\"18\" x2=\"3.01\" y2=\"18\"/>"
+      },
+      {
+        "title": "Hidden group headers when only General",
+        "desc": "If no custom groups are defined, group headers are hidden on Today and My Nutrients for a cleaner, minimal look.",
+        "icon": "<path d=\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/>"
+      }
+    ]
+  },
+  {
+    "version": "1.4",
+    "date": "24 Mar 2026",
+    "features": [
+      {
+        "title": "Home screen widgets",
+        "desc": "Three sizes (small, medium, large) showing your daily nutrient progress with interactive + buttons to log directly from your home screen.",
+        "icon": "<rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"/>"
+      },
+      {
+        "title": "Lock screen widgets",
+        "desc": "Circular ring gauge and inline text widget showing your daily completion count at a glance — no unlock needed.",
+        "icon": "<rect x=\"5\" y=\"2\" width=\"14\" height=\"20\" rx=\"2\"/><line x1=\"12\" y1=\"18\" x2=\"12\" y2=\"18\"/>"
+      },
+      {
+        "title": "Shared data via App Groups",
+        "desc": "Widgets read from the same SwiftData store as the main app via a shared container. Existing data migrates automatically on first launch.",
+        "icon": "<path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"/>"
+      }
+    ],
+    "improvements": [
+      {
+        "title": "Instant widget refresh",
+        "desc": "Widgets update immediately after logging (via + button or in-app) and on every app foreground.",
+        "icon": "<polyline points=\"23 4 23 10 17 10\"/><path d=\"M20.49 15a9 9 0 1 1-2.12-9.36L23 10\"/>"
+      },
+      {
+        "title": "Date in navigation bar",
+        "desc": "The Today screen now shows the current date (e.g. \"Tuesday, 24 March\") instead of a static title.",
+        "icon": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\"/><line x1=\"16\" y1=\"2\" x2=\"16\" y2=\"6\"/><line x1=\"8\" y1=\"2\" x2=\"8\" y2=\"6\"/><line x1=\"3\" y1=\"10\" x2=\"21\" y2=\"10\"/>"
+      }
+    ]
+  },
+  {
+    "version": "1.3",
+    "date": "23 Mar 2026",
+    "improvements": [
+      {
+        "title": "Completion count in group headers",
+        "desc": "Collapsed and expanded group headers now show how many nutrients have hit their daily target (e.g. \"2 / 5\").",
+        "icon": "<path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"/><polyline points=\"22 4 12 14.01 9 11.01\"/>"
+      },
+      {
+        "title": "Inline group creation",
+        "desc": "Create a new group directly from the nutrient form's group picker — no need to leave the screen.",
+        "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"16\"/><line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\"/>"
+      },
+      {
+        "title": "Haptic feedback",
+        "desc": "Subtle haptic feedback on +/− buttons for a more tactile logging experience.",
+        "icon": "<path d=\"M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9\"/><path d=\"M13.73 21a2 2 0 0 1-3.46 0\"/>"
+      },
+      {
+        "title": "Tighter group spacing",
+        "desc": "Reduced section spacing between groups on the Today screen for a more compact layout.",
+        "icon": "<line x1=\"8\" y1=\"6\" x2=\"21\" y2=\"6\"/><line x1=\"8\" y1=\"12\" x2=\"21\" y2=\"12\"/><line x1=\"8\" y1=\"18\" x2=\"21\" y2=\"18\"/><line x1=\"3\" y1=\"6\" x2=\"3.01\" y2=\"6\"/><line x1=\"3\" y1=\"12\" x2=\"3.01\" y2=\"12\"/><line x1=\"3\" y1=\"18\" x2=\"3.01\" y2=\"18\"/>"
+      },
+      {
+        "title": "Notes in reminders",
+        "desc": "Nutrient reminders now include the nutrient's note as the notification body when one is set.",
+        "icon": "<path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"/>"
+      }
+    ],
+    "fixes": [
+      {
+        "title": "Reminders not firing",
+        "desc": "Fixed nutrient reminders not triggering due to an async race condition in notification scheduling.",
+        "icon": "<path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\"/>"
+      },
+      {
+        "title": "Comma decimal separator",
+        "desc": "Fixed decimal input not working on devices using comma separators (e.g. entering \"0,5\" as a step value).",
+        "icon": "<path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\"/>"
+      },
+      {
+        "title": "Number display precision",
+        "desc": "Fixed values truncating to 1 decimal place — now shows up to 2 (e.g. \"0.25\").",
+        "icon": "<path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\"/>"
+      }
+    ]
+  },
+  {
+    "version": "1.2",
+    "date": "21 Mar 2026",
+    "features": [
+      {
+        "title": "Nutrient grouping",
+        "desc": "Organise nutrients into named groups (e.g. Vitamins, Supplements). Groups are collapsible on both Today and My Nutrients, with an aggregate progress bar when collapsed.",
+        "icon": "<path d=\"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z\"/>"
+      },
+      {
+        "title": "Manage Groups",
+        "desc": "New screen in Settings for creating, renaming, reordering, and deleting groups. A default \"General\" group is created automatically.",
+        "icon": "<circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z\"/>"
+      },
+      {
+        "title": "Move to Group",
+        "desc": "Long-press any nutrient on Today or My Nutrients to quickly move it to a different group.",
+        "icon": "<polyline points=\"5 9 2 12 5 15\"/><polyline points=\"9 5 12 2 15 5\"/><polyline points=\"15 19 12 22 9 19\"/><polyline points=\"19 9 22 12 19 15\"/><line x1=\"2\" y1=\"12\" x2=\"22\" y2=\"12\"/><line x1=\"12\" y1=\"2\" x2=\"12\" y2=\"22\"/>"
+      },
+      {
+        "title": "Group picker on create",
+        "desc": "When adding a nutrient, a group picker lets you assign it to a group right away (defaults to General).",
+        "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"16\"/><line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\"/>"
+      }
+    ]
+  },
+  {
+    "version": "1.1",
+    "date": "21 Mar 2026",
+    "features": [
+      {
+        "title": "Per-nutrient dose reminders",
+        "desc": "Set multiple daily reminders per nutrient (e.g. Aspirin at 9 AM, noon, and 8 PM). Smart suppression cancels upcoming reminders after you log intake.",
+        "icon": "<path d=\"M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9\"/><path d=\"M13.73 21a2 2 0 0 1-3.46 0\"/>"
+      },
+      {
+        "title": "Nutrient notes",
+        "desc": "Optional free-form text field on each nutrient. Shown as a muted line below the nutrient name on the Today card.",
+        "icon": "<path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"/>"
+      },
+      {
+        "title": "Monthly section headers in History",
+        "desc": "Day entries grouped under sticky month headers (e.g. \"March, 2026\") for easier navigation.",
+        "icon": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\"/><line x1=\"16\" y1=\"2\" x2=\"16\" y2=\"6\"/><line x1=\"8\" y1=\"2\" x2=\"8\" y2=\"6\"/><line x1=\"3\" y1=\"10\" x2=\"21\" y2=\"10\"/>"
+      },
+      {
+        "title": "Swipe actions on Today",
+        "desc": "Swipe right to add an exact amount, swipe left to edit a nutrient — right from the Today screen.",
+        "icon": "<polyline points=\"15 3 21 3 21 9\"/><polyline points=\"9 21 3 21 3 15\"/><line x1=\"21\" y1=\"3\" x2=\"14\" y2=\"10\"/><line x1=\"3\" y1=\"21\" x2=\"10\" y2=\"14\"/>"
+      },
+      {
+        "title": "Custom amount notes",
+        "desc": "Add an optional note when logging an exact amount. Notes are visible in the History intake detail.",
+        "icon": "<path d=\"M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7\"/><path d=\"M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z\"/>"
+      },
+      {
+        "title": "Settings page",
+        "desc": "New Settings screen with a Notifications toggle and About section. Access it from the profile menu.",
+        "icon": "<circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z\"/>"
+      },
+      {
+        "title": "Daily check-in reminder",
+        "desc": "Opt-in local notification at noon if you haven't logged anything that day. Smart scheduling adjusts based on your activity.",
+        "icon": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><polyline points=\"12 6 12 12 16 14\"/>"
+      },
+      {
+        "title": "Notification prompt banner",
+        "desc": "Dismissible banner on the Today screen prompting you to enable the daily reminder. Shown once after onboarding.",
+        "icon": "<path d=\"M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9\"/><path d=\"M13.73 21a2 2 0 0 1-3.46 0\"/>"
+      }
+    ],
+    "fixes": [
+      {
+        "title": "Migration crash fix",
+        "desc": "Fixed a SwiftData migration crash when the notification banner preference was added without a property-level default.",
+        "icon": "<path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\"/>"
+      },
+      {
+        "title": "Notification permission prompt",
+        "desc": "Fixed the permission prompt being swallowed when triggered from within a sheet.",
+        "icon": "<path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\"/>"
+      },
+      {
+        "title": "Stale reminder list",
+        "desc": "Fixed reminder list and count not refreshing after adding a new reminder.",
+        "icon": "<path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\"/>"
+      },
+      {
+        "title": "\"Add Reminder\" button visibility",
+        "desc": "Fixed the button being hidden behind the date picker by switching to a compact picker layout.",
+        "icon": "<path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\"/>"
+      }
+    ]
+  },
+  {
+    "version": "1.0",
+    "date": "20 Mar 2026",
+    "features": [
+      {
+        "title": "Onboarding",
+        "desc": "A two-step setup flow — personal info first, then your first nutrient. The app is never empty on day one.",
+        "icon": "<path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/>"
+      },
+      {
+        "title": "User-defined nutrients",
+        "desc": "No preset list. Create any nutrient with a custom name, unit, step size, and daily target.",
+        "icon": "<circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83\"/>"
+      },
+      {
+        "title": "Today, My Nutrients & History tabs",
+        "desc": "The core three-tab layout. Log intake with +/−, manage your list, and browse every past day.",
+        "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M3 9h18M9 21V9\"/>"
+      },
+      {
+        "title": "Fully offline & private",
+        "desc": "All data stored locally via SwiftData. No accounts, no servers, no telemetry — ever.",
+        "icon": "<rect x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\"/><path d=\"M7 11V7a5 5 0 0 1 10 0v4\"/>"
+      }
+    ]
+  }
+]
