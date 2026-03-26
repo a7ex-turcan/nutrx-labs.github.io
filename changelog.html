@@ -52,6 +52,21 @@
       padding: 24px 28px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.04);
     }
+    .timeline-status.loading {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .timeline-spinner {
+      width: 24px;
+      height: 24px;
+      border: 2px solid rgba(0,122,255,0.14);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+      animation: spin 0.8s linear infinite;
+    }
+    .timeline-status-body { min-width: 0; }
     .timeline-status-title {
       font-family: var(--display);
       font-size: 24px;
@@ -64,6 +79,9 @@
       font-weight: 300;
       color: var(--text-2);
       line-height: 1.7;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
     }
 
     /* ─── RELEASE ─── */
@@ -279,11 +297,17 @@
       .sort(compareVersions);
   }
 
-  function renderStatus(title, copy) {
+  function renderStatus(title, copy, options = {}) {
+    const statusClass = options.loading ? 'timeline-status loading' : 'timeline-status';
+    const spinner = options.loading ? '<div class="timeline-spinner" aria-hidden="true"></div>' : '';
+
     timeline.classList.add('timeline--status');
-    timeline.innerHTML = `<div class="timeline-status">
-      <p class="timeline-status-title">${escapeHtml(title)}</p>
-      <p class="timeline-status-copy">${escapeHtml(copy)}</p>
+    timeline.innerHTML = `<div class="${statusClass}">
+      ${spinner}
+      <div class="timeline-status-body">
+        <p class="timeline-status-title">${escapeHtml(title)}</p>
+        <p class="timeline-status-copy">${escapeHtml(copy)}</p>
+      </div>
     </div>`;
   }
 
@@ -325,7 +349,7 @@
   }
 
   async function loadChangelog() {
-    renderStatus('Loading changelog…', 'Fetching the latest release notes.');
+    renderStatus('Loading changelog…', 'Fetching the latest release notes.', { loading: true });
 
     try {
       const response = await fetch('changelog.json', { cache: 'no-store' });
