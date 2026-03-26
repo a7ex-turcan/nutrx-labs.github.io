@@ -71,6 +71,59 @@
       font-size: 19px; font-weight: 500;
       letter-spacing: -0.02em;
     }
+    .nav-right {
+      display: flex; align-items: center; gap: 22px;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 18px;
+    }
+    .nav-link {
+      font-size: 14px;
+      color: var(--text-2);
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.18s, opacity 0.18s;
+    }
+    .nav-link:hover {
+      color: var(--text);
+      opacity: 0.8;
+    }
+    .nav-toggle {
+      display: none;
+      width: 42px; height: 42px;
+      border: 1px solid var(--border-med);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.72);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.18s, border-color 0.18s;
+    }
+    .nav-toggle:hover {
+      background: rgba(255,255,255,0.92);
+      border-color: rgba(0,0,0,0.18);
+    }
+    .nav-toggle-box {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .nav-toggle-box span {
+      display: block;
+      width: 16px; height: 2px;
+      border-radius: 999px;
+      background: var(--text);
+      transition: transform 0.22s ease, opacity 0.22s ease;
+    }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-box span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-box span:nth-child(2) {
+      opacity: 0;
+    }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-box span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
     .nav-btn {
       display: inline-block;
       background: var(--text); color: var(--bg);
@@ -481,6 +534,9 @@
     /* ─── RESPONSIVE ─── */
     @media (max-width: 768px) {
       .nav { padding: 0 24px; }
+      .nav-right { gap: 14px; }
+      .nav-links { gap: 12px; }
+      .nav-link { font-size: 13px; }
       .hero { padding: 120px 24px 60px; }
       .showcase {
         grid-template-columns: 1fr;
@@ -498,6 +554,49 @@
       }
     }
     @media (max-width: 480px) {
+      .nav {
+        position: fixed;
+        height: 64px;
+        padding: 12px 20px;
+        align-items: center;
+        overflow: visible;
+      }
+      .nav-right {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 0;
+        width: min(240px, calc(100vw - 40px));
+        padding: 14px 16px;
+        background: rgba(255,255,255,0.96);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2px;
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .nav-link {
+        width: 100%;
+        color: var(--text);
+        padding: 8px 0;
+        text-align: left;
+      }
+      .nav-btn {
+        padding: 8px 18px;
+      }
+      .nav-toggle {
+        display: inline-flex;
+      }
       .feat-grid { grid-template-columns: 1fr; }
     }
     @media (min-width: 769px) and (max-width: 1024px) {
@@ -513,7 +612,21 @@
     <img src="nutrx_icon_1024.png" alt="nutrx app icon">
     <span class="nav-logo-text">nutrx</span>
   </a>
-  <a href="https://apps.apple.com/us/app/nutrx/id6760843478" target="_blank" rel="noopener" class="nav-btn">Download</a>
+  <div class="nav-right">
+    <nav class="nav-links" aria-label="Primary" id="site-menu">
+      <a href="changelog.html" class="nav-link">What's New</a>
+      <a href="privacy.html" class="nav-link">Privacy</a>
+      <a href="support.html" class="nav-link">Support</a>
+    </nav>
+    <a href="https://apps.apple.com/us/app/nutrx/id6760843478" target="_blank" rel="noopener" class="nav-btn">Download</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <span class="nav-toggle-box" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+  </div>
 </header>
 
 
@@ -728,6 +841,17 @@
 
 
 <script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.getElementById('site-menu');
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!isOpen));
+      navMenu.classList.toggle('open', !isOpen);
+    });
+  }
+
   // ── Scroll-in animations ──
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

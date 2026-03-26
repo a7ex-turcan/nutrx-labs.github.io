@@ -59,12 +59,61 @@
       font-size: 19px; font-weight: 500;
       letter-spacing: -0.02em;
     }
-    .nav-back {
-      font-size: 14px; color: var(--accent);
-      text-decoration: none; font-weight: 400;
-      transition: opacity 0.18s;
+    .nav-links {
+      display: flex; align-items: center; gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
-    .nav-back:hover { opacity: 0.65; }
+    .nav-link {
+      font-size: 14px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.18s, opacity 0.18s;
+    }
+    .nav-link:hover {
+      color: var(--text);
+      opacity: 0.8;
+    }
+    .nav-right {
+      display: flex; align-items: center;
+    }
+    .nav-toggle {
+      display: none;
+      width: 42px; height: 42px;
+      border: 1px solid var(--border-med);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.72);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.18s, border-color 0.18s;
+    }
+    .nav-toggle:hover {
+      background: rgba(255,255,255,0.92);
+      border-color: rgba(0,0,0,0.18);
+    }
+    .nav-toggle-box {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .nav-toggle-box span {
+      display: block;
+      width: 16px; height: 2px;
+      border-radius: 999px;
+      background: var(--text);
+      transition: transform 0.22s ease, opacity 0.22s ease;
+    }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-box span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-box span:nth-child(2) {
+      opacity: 0;
+    }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-box span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
 
     /* ─── MAIN ─── */
     .main {
@@ -195,7 +244,43 @@
     .footer-note a:hover { color: var(--text); }
 
     @media (max-width: 600px) {
-      .nav { padding: 0 24px; }
+      .nav {
+        height: 64px;
+        padding: 12px 24px;
+        align-items: center;
+        overflow: visible;
+      }
+      .nav-right {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 0;
+        width: min(240px, calc(100vw - 48px));
+        padding: 14px 16px;
+        background: rgba(255,255,255,0.96);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2px;
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .nav-link {
+        font-size: 14px;
+        line-height: 1.2;
+        color: var(--text);
+        padding: 8px 0;
+        text-align: left;
+      }
+      .nav-toggle { display: inline-flex; }
       .main { padding: 48px 24px 80px; }
       .support-card { padding: 22px 20px; gap: 16px; }
     }
@@ -208,7 +293,21 @@
     <img src="nutrx_icon_1024.png" alt="nutrx">
     <span class="nav-logo-text">nutrx</span>
   </a>
-  <a href="/" class="nav-back">← Back</a>
+  <div class="nav-right">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <span class="nav-toggle-box" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+    <nav class="nav-links" aria-label="Primary" id="site-menu">
+      <a href="/" class="nav-link">Home</a>
+      <a href="changelog.html" class="nav-link">What's New</a>
+      <a href="privacy.html" class="nav-link">Privacy</a>
+      <a href="support.html" class="nav-link">Support</a>
+    </nav>
+  </div>
 </header>
 
 <main class="main">
@@ -304,6 +403,17 @@
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.getElementById('site-menu');
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!isOpen));
+      navMenu.classList.toggle('open', !isOpen);
+    });
+  }
+
   document.querySelectorAll('.faq-q').forEach((question) => {
     question.addEventListener('click', () => {
       question.parentElement.classList.toggle('open');
