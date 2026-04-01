@@ -1,5 +1,43 @@
 [
   {
+    "version": "1.7",
+    "date": "1 Apr 2026",
+    "features": [
+      {
+        "title": "Expandable nutrient cards",
+        "desc": "Tap any nutrient card on the Today screen to see a chronological breakdown of every intake logged for that nutrient today, including times, amounts, and notes.",
+        "icon": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M7 8h10\"/><path d=\"M7 12h6\"/><path d=\"M9 16l3 3 3-3\"/>"
+      },
+      {
+        "title": "Reminders during nutrient creation",
+        "desc": "Set dose reminders while creating a new nutrient, making the feature more discoverable. Notification permission is requested gracefully on first use.",
+        "icon": "<path d=\"M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9\"/><path d=\"M13.73 21a2 2 0 0 1-3.46 0\"/>"
+      }
+    ],
+    "improvements": [
+      {
+        "title": "Log button in expanded cards",
+        "desc": "A quick-access + button at the bottom of expanded nutrient cards opens the exact amount sheet, encouraging logging directly from the breakdown view.",
+        "icon": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M12 10v8\"/><path d=\"M8 14h8\"/>"
+      },
+      {
+        "title": "Nutrient row summary in My Nutrients",
+        "desc": "Each nutrient now shows daily target, reminder count, and step increment as three icon-labeled columns for better scannability and reminder discoverability. Nutrient notes are displayed inline next to the name.",
+        "icon": "<line x1=\"4\" y1=\"7\" x2=\"20\" y2=\"7\"/><line x1=\"4\" y1=\"12\" x2=\"20\" y2=\"12\"/><line x1=\"4\" y1=\"17\" x2=\"20\" y2=\"17\"/><path d=\"M7 7h.01\"/><path d=\"M7 12h.01\"/><path d=\"M7 17h.01\"/>"
+      },
+      {
+        "title": "Keyboard dismiss after onboarding nutrient",
+        "desc": "The keyboard now hides after adding a nutrient during onboarding so the Get Started button is visible.",
+        "icon": "<rect x=\"2\" y=\"6\" width=\"20\" height=\"12\" rx=\"2\"/><path d=\"M6 10h.01\"/><path d=\"M10 10h.01\"/><path d=\"M14 10h.01\"/><path d=\"M18 10h.01\"/><path d=\"M8 14l4 4 4-4\"/>"
+      },
+      {
+        "title": "Empty group delete confirmation",
+        "desc": "Deleting a group with no nutrients now shows a simpler confirmation without mentioning \"0 nutrients will be moved\".",
+        "icon": "<path d=\"M3 6h18\"/><path d=\"M8 6V4h8v2\"/><path d=\"M19 6l-1 13H6L5 6\"/>"
+      }
+    ]
+  },
+  {
     "version": "1.6",
     "date": "26 Mar 2026",
     "features": [
