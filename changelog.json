@@ -1,5 +1,38 @@
 [
   {
+    "version": "1.9",
+    "date": "3 Apr 2026",
+    "features": [
+      {
+        "title": "Nutrient goal types",
+        "desc": "Each nutrient can now be configured as \"At least\" (minimum), \"At most\" (maximum), or \"Between\" (range). Progress bars, analytics charts, streaks, and widgets all adapt to the selected goal type.",
+        "icon": "<path d=\"M4 20h16\"/><path d=\"M7 16l3-3 2 2 5-6\"/><path d=\"M17 9h2v2\"/>"
+      },
+      {
+        "title": "Goal type picker in nutrient form",
+        "desc": "Segmented control with plain-English labels, a dynamic caption explaining the behavior, and a live mini progress bar preview so you see the exact colors before saving.",
+        "icon": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"6\" rx=\"3\"/><rect x=\"3\" y=\"13\" width=\"18\" height=\"6\" rx=\"3\"/><path d=\"M9 5v6\"/><path d=\"M15 13v6\"/>"
+      },
+      {
+        "title": "Range target fields",
+        "desc": "When \"Between\" is selected, Minimum and Maximum fields appear side by side for quick entry.",
+        "icon": "<rect x=\"3\" y=\"6\" width=\"7\" height=\"12\" rx=\"2\"/><rect x=\"14\" y=\"6\" width=\"7\" height=\"12\" rx=\"2\"/><path d=\"M10 12h4\"/>"
+      }
+    ],
+    "improvements": [
+      {
+        "title": "Gradual color transitions",
+        "desc": "Progress bars and chart bars now blend colors smoothly: blue→green for minimum nutrients, orange→red for maximum, and yellow→red when exceeding limits — instead of abrupt color switches.",
+        "icon": "<path d=\"M4 18c3-8 13-8 16 0\"/><path d=\"M4 18h16\"/>"
+      },
+      {
+        "title": "Visible overflow on progress bars",
+        "desc": "Maximum and range progress bars scale the limit tick mark to 85% of the bar width, so exceeding the limit is immediately obvious as the fill extends past the mark.",
+        "icon": "<path d=\"M4 12h16\"/><path d=\"M17 9v6\"/><path d=\"M4 12h19\"/>"
+      }
+    ]
+  },
+  {
     "version": "1.8",
     "date": "1 Apr 2026",
     "features": [
