@@ -29,6 +29,11 @@
         "title": "Visible overflow on progress bars",
         "desc": "Maximum and range progress bars scale the limit tick mark to 85% of the bar width, so exceeding the limit is immediately obvious as the fill extends past the mark.",
         "icon": "<path d=\"M4 12h16\"/><path d=\"M17 9v6\"/><path d=\"M4 12h19\"/>"
+      },
+      {
+        "title": "Collapsed intake history",
+        "desc": "Expanded nutrient cards on Today now show only the 5 most recent entries by default, with a \"Show all\" link when there are more. Keeps the screen manageable on heavy logging days.",
+        "icon": "<path d=\"M3 6h18\"/><path d=\"M3 12h18\"/><path d=\"M3 18h18\"/><path d=\"M9 21l3-3 3 3\"/>"
       }
     ]
   },
