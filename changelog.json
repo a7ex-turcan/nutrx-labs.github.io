@@ -1,5 +1,40 @@
 [
   {
+    "version": "1.10",
+    "date": "17 Apr 2026",
+    "features": [
+      {
+        "title": "Apple Watch companion app",
+        "desc": "A focused wrist companion for logging intake. Shows today's active nutrients with goal-type-aware progress bars and a + button on each row to log one step increment. Reads from the same shared SwiftData store as the iPhone app via the existing App Group — no extra setup, data appears automatically.",
+        "icon": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><circle cx=\"12\" cy=\"12\" r=\"6\"/><polyline points=\"12 8 12 12 14 14\"/>"
+      },
+      {
+        "title": "Watch complications",
+        "desc": "WidgetKit-based complications for the Watch face: circular ring gauge, corner count, and inline text showing \"X / Y on target\" at a glance. Refresh after every log tap.",
+        "icon": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 6v6l4 2\"/>"
+      }
+    ],
+    "improvements": [
+      {
+        "title": "Faster first launch on a brand-new install",
+        "desc": "Skip the 3-second CloudKit sync wait when the app has never launched on this device before and there's no prior iCloud data to restore. Onboarding appears instantly.",
+        "icon": "<polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"/>"
+      }
+    ],
+    "fixes": [
+      {
+        "title": "Reminder suppression re-firing notifications",
+        "desc": "Fixed dose reminders firing again later the same day after being suppressed by a logged intake.",
+        "icon": "<path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\"/>"
+      },
+      {
+        "title": "History flame badges ignoring goal types",
+        "desc": "Fixed the flame streak indicators on History days using minimum-only logic. They now correctly respect each nutrient's goal type (minimum / maximum / range), matching the rest of the app.",
+        "icon": "<path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\"/>"
+      }
+    ]
+  },
+  {
     "version": "1.9",
     "date": "3 Apr 2026",
     "features": [
