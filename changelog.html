@@ -3,9 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What's New — nutrx</title>
-  <meta name="description" content="See what's new in nutrx. Every update, every fix, every improvement.">
+  <title>nutrx Changelog — Release Notes, Updates &amp; New Features</title>
+  <meta name="description" content="Read the nutrx changelog with release notes, new features, fixes, and product updates for the privacy-first nutrient tracker app.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#F7F7F5">
+  <meta name="apple-itunes-app" content="app-id=6760843478">
+  <link rel="canonical" href="https://www.nutrx-labs.com/changelog.html">
+  <meta property="og:site_name" content="nutrx">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="nutrx Changelog — Release Notes, Updates &amp; New Features">
+  <meta property="og:description" content="Read release notes, new features, fixes, and product updates for nutrx.">
+  <meta property="og:url" content="https://www.nutrx-labs.com/changelog.html">
+  <meta property="og:image" content="https://www.nutrx-labs.com/nutrx_icon_1024.png">
+  <meta property="og:image:alt" content="nutrx app icon">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="nutrx Changelog — Release Notes, Updates &amp; New Features">
+  <meta name="twitter:description" content="Read release notes, new features, fixes, and product updates for nutrx.">
+  <meta name="twitter:image" content="https://www.nutrx-labs.com/nutrx_icon_1024.png">
   <link rel="icon" type="image/png" href="nutrx_icon_1024.png">
+  <link rel="apple-touch-icon" href="nutrx_icon_1024.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -222,7 +241,80 @@
   <h1 class="page-title">Every update,<br>documented.</h1>
   <p class="page-intro">nutrx ships fast and improves constantly. Here's everything that's changed, version by version.</p>
 
-  <div class="timeline" id="timeline"></div>
+  <div class="timeline" id="timeline">
+    <div class="release latest">
+      <div class="release-dot"></div>
+      <div class="release-body">
+        <div class="release-header">
+          <span class="release-version">v1.10</span>
+          <span class="release-date">17 Apr 2026</span>
+          <span class="release-badge badge-latest">Current</span>
+        </div>
+        <div class="change-groups">
+          <div>
+            <p class="change-group-label label-features">Features</p>
+            <div class="change-list">
+              <div class="change-item">
+                <div class="change-icon icon-feature">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><polyline points="12 8 12 12 14 14"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">Apple Watch companion app</p>
+                  <p class="change-desc">A focused wrist companion for logging intake with today's active nutrients, goal-aware progress bars, and one-tap step logging.</p>
+                </div>
+              </div>
+              <div class="change-item">
+                <div class="change-icon icon-feature">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">Watch complications</p>
+                  <p class="change-desc">WidgetKit-based watch face complications showing ring gauge, count, and inline progress at a glance.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="change-group-label label-improvements">Improvements</p>
+            <div class="change-list">
+              <div class="change-item">
+                <div class="change-icon icon-improvement">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#34C759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">Faster first launch on a brand-new install</p>
+                  <p class="change-desc">New installs skip an unnecessary CloudKit wait and show onboarding immediately when there is nothing to restore.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="change-group-label label-fixes">Fixes</p>
+            <div class="change-list">
+              <div class="change-item">
+                <div class="change-icon icon-fix">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#FF9F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">Reminder suppression re-firing notifications</p>
+                  <p class="change-desc">Fixed dose reminders firing again later the same day after being suppressed by a logged intake.</p>
+                </div>
+              </div>
+              <div class="change-item">
+                <div class="change-icon icon-fix">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#FF9F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">History flame badges ignoring goal types</p>
+                  <p class="change-desc">Fixed streak indicators in History so they correctly respect minimum, maximum, and range-based nutrient goals.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <p class="footer-note">
     © 2026 nutrx · <a href="/">Home</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a>
