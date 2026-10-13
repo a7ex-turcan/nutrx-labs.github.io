@@ -28,7 +28,7 @@ Use plain HTML, CSS, and minimal vanilla JavaScript. Follow the existing style:
 - descriptive class names like `hero-badge` or `nav-logo-text`
 - reuse existing CSS variables, fonts, and spacing patterns before introducing new ones
 
-Prefer the existing design system: `Fraunces` for display text, `DM Sans` for body copy, and shared `:root` variables such as `--bg`, `--text`, `--text-2`, `--accent`, `--green`, `--orange`, and `--r`. `index.html` uses the fixed blurred nav and `.fu` reveal animation; subpages use a simpler back-link nav.
+Prefer the existing design system (matches the app redesign): rounded display type (`--display`: ui-rounded → Nunito), system sans body (`--sans`), forest `--accent` and icon green `--green` (use `--green-ink` for green text), and shared `:root` variables in `assets/site.css` such as `--bg`, `--text`, `--text-2`, `--orange`, and `--r`. `index.html` uses the fixed blurred nav and `.fu` reveal animation; subpages use a simpler back-link nav.
 
 There is no configured formatter or linter, so keep edits small and consistent with surrounding code.
 
