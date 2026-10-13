@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-Static marketing website for **nutrx**, a privacy-first iOS nutrient tracking app. Hosted on GitHub Pages at `www.nutrx-labs.com` (see `CNAME`). There is no build step, bundler, or framework — just plain HTML/CSS/JS served directly.
+Static marketing website for **nutrx**, a privacy-first iOS nutrient tracking app. Hosted on GitHub Pages at `nutrx.nutrx-labs.com` (see `CNAME`). There is no build step, bundler, or framework — just plain HTML/CSS/JS served directly.
 
 ## Development
 
@@ -17,7 +17,7 @@ Open any `.html` file in a browser to preview. No build, install, or serve comma
 - `privacy.html` — Privacy policy
 - `support.html` — Support/contact page
 - `nutrx_icon_1024.png` — App icon used across all pages
-- `CNAME` — GitHub Pages custom domain (`www.nutrx-labs.com`)
+- `CNAME` — GitHub Pages custom domain (`nutrx.nutrx-labs.com`)
 
 ## Design System
 

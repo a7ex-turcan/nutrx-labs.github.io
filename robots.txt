@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.nutrx-labs.com/sitemap.xml
+Sitemap: https://nutrx.nutrx-labs.com/sitemap.xml

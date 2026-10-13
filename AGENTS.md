@@ -1,7 +1,7 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-This repository is a static GitHub Pages marketing site for the nutrx iOS app at `www.nutrx-labs.com`. There is no framework or build pipeline.
+This repository is a static GitHub Pages marketing site for the nutrx iOS app at `nutrx.nutrx-labs.com`. There is no framework or build pipeline.
 
 - `index.html`: landing page and primary marketing content
 - `changelog.html`: release history
