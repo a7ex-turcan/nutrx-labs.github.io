@@ -87,6 +87,8 @@
       margin-bottom: 28px;
       box-shadow: var(--shadow-card);
     }
+    a.hero-badge { text-decoration: none; transition: color .2s, box-shadow .2s; }
+    a.hero-badge:hover { color: var(--text); box-shadow: var(--shadow-card), 0 0 0 2px rgba(30,185,85,0.25); }
     .badge-dot {
       width: 8px; height: 8px;
       background: var(--green); border-radius: 50%;
@@ -612,7 +614,7 @@
 
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <div class="hero-badge fu"><span class="badge-dot"></span>Free on the App Store</div>
+      <a class="hero-badge fu" href="changelog.html"><span class="badge-dot"></span>nutrx 2.0 is out · Free on the App Store</a>
       <h1 class="fu">Track what you take. <em>Nothing else.</em></h1>
       <p class="hero-sub fu">nutrx is a privacy-first iPhone app for your vitamins, minerals, supplements, water and caffeine. Define your own nutrients, hit your targets, and keep every byte of your data.</p>
       <div class="hero-cta fu">
