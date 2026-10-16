@@ -159,6 +159,14 @@
         <div class="summary-dot"></div>
         <span><strong>No third-party SDKs.</strong> There are no third-party libraries or services embedded in the app.</span>
       </div>
+      <div class="summary-row">
+        <div class="summary-dot"></div>
+        <span><strong>Apple Health stays on your iPhone.</strong> If you connect it, nutrx only reads, never writes, and never stores or syncs what it reads.</span>
+      </div>
+      <div class="summary-row">
+        <div class="summary-dot"></div>
+        <span><strong>On-device intelligence only.</strong> Label reading and recap wording run on your iPhone. Nothing is sent to an AI service.</span>
+      </div>
     </div>
   </div>
 
@@ -183,8 +191,34 @@
     </div>
 
     <div class="prose-section">
+      <h2>Apple Health</h2>
+      <p>nutrx Pro can show how your intake lines up with your sleep, workouts and active energy. This is optional and off until you turn it on in nutrx. If you connect Apple Health, nutrx asks iOS for permission to <strong>read</strong> three things: sleep analysis, workouts and active energy. It never writes anything to Apple Health.</p>
+      <p>What nutrx reads is used on your iPhone, in memory, to work out the patterns it shows you. It is never saved in nutrx's database, never synced to iCloud, never shown in widgets, and never sent to us or anyone else. The only thing nutrx remembers is whether you switched the connection on, on that device. You can disconnect in nutrx under Settings → Apple Health, and change or remove nutrx's access at any time in the Health app.</p>
+    </div>
+
+    <div class="prose-section">
+      <h2>On-device intelligence</h2>
+      <p>Two nutrx Pro features use Apple Intelligence where your iPhone supports it: reading a supplement label you scan, and wording your weekly recap. Both run entirely on your device with Apple's on-device model. Nothing you scan or log is sent to an AI service, Apple's or anyone else's. Where Apple Intelligence isn't available, nutrx uses simpler text matching and templates on the device instead.</p>
+    </div>
+
+    <div class="prose-section">
+      <h2>Camera and photos</h2>
+      <p>nutrx uses the camera only when you choose to take a profile photo or scan a label, and reads a photo from your library only when you pick one. A scanned label is read on your iPhone to fill in the new-nutrient form, and the image isn't kept. A profile photo is stored with your profile, on your devices and in your private iCloud when sync is on.</p>
+    </div>
+
+    <div class="prose-section">
+      <h2>Purchases</h2>
+      <p>nutrx Pro is bought through the App Store. Apple handles the payment; we never see your payment details, name or Apple Account. nutrx checks whether you have Pro on your device each time it starts, using Apple's StoreKit, and doesn't store that result in its database or in iCloud.</p>
+    </div>
+
+    <div class="prose-section">
+      <h2>Files you export</h2>
+      <p>Export data (a CSV of your log) and the report for your doctor (a PDF, nutrx Pro) are made on your device and shared only where you choose in the share sheet. nutrx doesn't keep a copy: the file is removed from the device when the share sheet closes.</p>
+    </div>
+
+    <div class="prose-section">
       <h2>Internet access</h2>
-      <p>nutrx doesn't need an internet connection. It works entirely offline. Its only network traffic goes through Apple: iCloud syncing your data when sync is on, and the App Store when you choose to rate nutrx. Reminders are scheduled on your device. There is no nutrx backend server, API, or cloud service.</p>
+      <p>nutrx doesn't need an internet connection. It works entirely offline. Its only network traffic goes through Apple: iCloud syncing your data when sync is on, and the App Store for nutrx Pro purchases and when you choose to rate nutrx. Reminders are scheduled on your device. There is no nutrx backend server, API, or cloud service.</p>
     </div>
 
     <div class="prose-section">

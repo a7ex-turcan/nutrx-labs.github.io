@@ -413,6 +413,8 @@
     .cap-icon svg { width: 20px; height: 20px; }
     .cap h3 { font-size: 16px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 4px; }
     .cap p { font-size: 14px; color: var(--text-2); line-height: 1.55; }
+    /* nutrx Pro's five features: one row on wide screens. */
+    .cap-grid--five { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 
     .tint-sun    { background: #FCF1D2; } .tint-sun svg    { stroke: #B07E00; }
     .tint-teal   { background: #D6F1EF; } .tint-teal svg   { stroke: #0F8A84; }
@@ -614,14 +616,14 @@
 
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <a class="hero-badge fu" href="changelog.html"><span class="badge-dot"></span>nutrx 2.0 is out · Free on the App Store</a>
+      <a class="hero-badge fu" href="changelog.html"><span class="badge-dot"></span>nutrx 2.1 is out · Free on the App Store</a>
       <h1 class="fu">Track what you take. <em>Nothing else.</em></h1>
       <p class="hero-sub fu">nutrx is a privacy-first iPhone app for your vitamins, minerals, supplements, water and caffeine. Define your own nutrients, hit your targets, and keep every byte of your data.</p>
       <div class="hero-cta fu">
         <a class="appstore-btn" href="https://apps.apple.com/us/app/nutrx/id6760843478?itscg=30200&itsct=apps_box_badge&mttnsubad=6760843478">
           <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1774224000" alt="Download on the App Store" width="168" height="56">
         </a>
-        <p class="version-tag"><strong>v2.0 · Health &amp; Fitness</strong><a href="changelog.html" class="whats-new-link">What's new →</a></p>
+        <p class="version-tag"><strong>v2.1 · Health &amp; Fitness</strong><a href="changelog.html" class="whats-new-link">What's new →</a></p>
       </div>
       <ul class="hero-facts fu" aria-label="Highlights">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4"/></svg>No account</li>
@@ -880,6 +882,50 @@
 </section>
 
 
+
+<!-- ── PRO ── -->
+<section class="section" id="pro" style="padding-top: 20px">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow fu">nutrx Pro · new in 2.1</p>
+      <h2 class="section-h fu">A little more, <em>if you want it.</em></h2>
+      <p class="section-lead fu">An optional upgrade that adds a few things around tracking. Everything else in nutrx stays free, including stacks, Siri and data export, and nothing free will ever move behind it.</p>
+    </div>
+
+    <div class="cap-grid cap-grid--five">
+      <div class="cap fu">
+        <div class="cap-icon tint-sun"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v3L8 8v12h8V8l-2-2V3M8 13h8"/></svg></div>
+        <h3>Supply &amp; refills</h3>
+        <p>Know when a bottle runs out. nutrx counts down as you log and reminds you once, a week ahead.</p>
+      </div>
+      <div class="cap fu">
+        <div class="cap-icon tint-teal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4M8 12h8"/></svg></div>
+        <h3>Scan a label</h3>
+        <p>Point the camera at the Supplement Facts and the new nutrient fills itself in. Read on your iPhone.</p>
+      </div>
+      <div class="cap fu">
+        <div class="cap-icon tint-indigo"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/></svg></div>
+        <h3>Weekly recap</h3>
+        <p>Every Sunday, your week in a few lines: goals met, your steadiest nutrient, what slipped.</p>
+      </div>
+      <div class="cap fu">
+        <div class="cap-icon tint-coral"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></div>
+        <h3>Trends with Apple Health</h3>
+        <p>How your intake lines up with sleep and workouts. Patterns in your own data, never advice.</p>
+      </div>
+      <div class="cap fu">
+        <div class="cap-icon tint-blue"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5"/></svg></div>
+        <h3>Report for your doctor</h3>
+        <p>A clean PDF of any period: goals, daily totals, hit rates and your notes.</p>
+      </div>
+    </div>
+
+    <div class="center">
+      <p class="section-lead fu" style="margin-top: 28px">$1.99 a month, $14.99 a year with a free week, or $29.99 once. Pro features run on your iPhone, and nutrx checks your purchase there too, without storing or syncing it.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ── PRIVACY ── -->
 <section class="privacy">
   <svg class="privacy-rings" viewBox="0 0 1100 1100" aria-hidden="true">
@@ -912,7 +958,7 @@
       <a class="appstore-btn" href="https://apps.apple.com/us/app/nutrx/id6760843478?itscg=30200&itsct=apps_box_badge&mttnsubad=6760843478">
         <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1774224000" alt="Download on the App Store" width="168" height="56">
       </a>
-      <p class="version-tag"><strong>v2.0 · Health &amp; Fitness · Free</strong><a href="changelog.html" class="whats-new-link">What's new →</a></p>
+      <p class="version-tag"><strong>v2.1 · Health &amp; Fitness · Free</strong><a href="changelog.html" class="whats-new-link">What's new →</a></p>
     </div>
   </div>
 </section>
