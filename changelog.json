@@ -1,5 +1,59 @@
 [
   {
+    "version": "2.1",
+    "date": "16 Oct 2026",
+    "features": [
+      {
+        "title": "Stacks",
+        "desc": "Log everything you take together in one tap. Make a \"Morning\" stack with Vitamin D, Omega-3 and Magnesium and log it from its own Stacks tab or from Today. Change the amounts for that time, undo it, and see which stacks you've logged today.",
+        "icon": "<path d=\"M12 2l9 5-9 5-9-5 9-5z\"/><path d=\"M3 12l9 5 9-5\"/><path d=\"M3 17l9 5 9-5\"/>"
+      },
+      {
+        "title": "Siri and Shortcuts",
+        "desc": "Say \"Log my Vitamin D with nutrx\" or \"Log my Morning stack with nutrx\", or use the new Log Nutrient and Log Stack actions in the Shortcuts app. nutrx answers with your new total.",
+        "icon": "<path d=\"M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z\"/><path d=\"M19 10v2a7 7 0 0 1-14 0v-2\"/><line x1=\"12\" y1=\"19\" x2=\"12\" y2=\"22\"/>"
+      },
+      {
+        "title": "Export your data",
+        "desc": "Settings → Export data saves your log as a CSV file, one row per entry, for all time or the last 30 or 90 days. It opens in Numbers, Excel or Google Sheets, and it's made on your iPhone.",
+        "icon": "<path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><polyline points=\"17 8 12 3 7 8\"/><line x1=\"12\" y1=\"3\" x2=\"12\" y2=\"15\"/>"
+      },
+      {
+        "title": "nutrx Pro: Supply & refills",
+        "desc": "An optional upgrade, new in 2.1. Tell nutrx how many servings are in the bottle and it counts down as you log, warns on Today when you're running low, and sends one refill reminder per bottle.",
+        "icon": "<path d=\"M9 3h6\"/><path d=\"M10 3v3L8 8v12h8V8l-2-2V3\"/><path d=\"M8 13h8\"/>"
+      },
+      {
+        "title": "nutrx Pro: Scan a label",
+        "desc": "Point the camera at a bottle's Supplement Facts and the new-nutrient form fills itself in. Read on your iPhone, with Apple Intelligence where available; nothing is uploaded, and the goal is always yours to set.",
+        "icon": "<path d=\"M4 8V4h4\"/><path d=\"M16 4h4v4\"/><path d=\"M20 16v4h-4\"/><path d=\"M8 20H4v-4\"/><path d=\"M8 12h8\"/>"
+      },
+      {
+        "title": "nutrx Pro: Weekly recap",
+        "desc": "Every Sunday evening, a short summary of your week: goals met, full days, your steadiest nutrient, what slipped and the weekday you tend to miss. It describes your week and never gives advice.",
+        "icon": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\"/><line x1=\"16\" y1=\"2\" x2=\"16\" y2=\"6\"/><line x1=\"8\" y1=\"2\" x2=\"8\" y2=\"6\"/><line x1=\"3\" y1=\"10\" x2=\"21\" y2=\"10\"/>"
+      },
+      {
+        "title": "nutrx Pro: Trends with Apple Health",
+        "desc": "See how your intake lines up with your sleep, workouts and active energy over four weeks. nutrx only reads from Health, nothing it reads is stored or synced, and it shows patterns, not causes.",
+        "icon": "<path d=\"M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z\"/>"
+      },
+      {
+        "title": "nutrx Pro: Report for your doctor",
+        "desc": "A clean PDF of any period to bring to an appointment: each nutrient's goal, average, hit rate and days logged, a chart of daily totals and your notes. From History or Settings.",
+        "icon": "<path d=\"M7 3h7l4 4v14H7z\"/><path d=\"M14 3v4h4\"/><path d=\"M10 12h5\"/><path d=\"M10 16h5\"/>"
+      }
+    ],
+    "improvements": [
+      {
+        "title": "Everything free stays free",
+        "desc": "nutrx Pro only adds things around tracking. Logging, history, streaks, analytics, widgets, the Watch, iCloud sync, stacks, Siri and export are free, with no ads.",
+        "icon": "<path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"/><polyline points=\"22 4 12 14.01 9 11.01\"/>"
+      }
+    ],
+    "fixes": []
+  },
+  {
     "version": "2.0",
     "date": "15 Oct 2026",
     "features": [
