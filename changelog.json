@@ -1,5 +1,56 @@
 [
   {
+    "version": "2.2",
+    "date": "18 Oct 2026",
+    "features": [
+      {
+        "title": "nutrx Pro: Courses",
+        "desc": "Taking something for 5 days, or until a date? Set a Duration when you add or edit a nutrient. After the last day it leaves Today and its reminders stop, and it waits in a Finished section in My Nutrients, where Restart brings it back. History and streaks count it only for the days it was meant to be taken.",
+        "icon": "<path d=\"M4 6h16v14H4zM4 10h16M8 3v4M16 3v4M9 15l2 2 4-4\"/>"
+      },
+      {
+        "title": "Select several nutrients",
+        "desc": "In My Nutrients, tap Select, pick the nutrients you want, then move them to a group or delete them in one go. Your logged history stays.",
+        "icon": "<path d=\"M9 11l3 3 8-8\"/><path d=\"M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9\"/>"
+      },
+      {
+        "title": "Your data, in History",
+        "desc": "Export data and the report for your doctor moved from Settings to a Your data card at the end of History, and to the share button at the top of History.",
+        "icon": "<path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><polyline points=\"17 8 12 3 7 8\"/><line x1=\"12\" y1=\"3\" x2=\"12\" y2=\"15\"/>"
+      }
+    ],
+    "improvements": [
+      {
+        "title": "Your plan at a glance",
+        "desc": "Today shows a small Free or PRO chip at the top left. On the free plan it opens what nutrx Pro adds; on Pro it shows your plan and what's included.",
+        "icon": "<rect x=\"3\" y=\"8\" width=\"18\" height=\"8\" rx=\"4\"/>"
+      },
+      {
+        "title": "Where Apple Health insights appear",
+        "desc": "After you connect Apple Health (nutrx Pro), nutrx says what happens next. Today shows how close your first insight is, with a way to see where it'll appear.",
+        "icon": "<path d=\"M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z\"/>"
+      },
+      {
+        "title": "Smaller touches",
+        "desc": "On the Stacks tab the + sits before your profile picture, as on the other tabs. VoiceOver reads Settings → Groups and About more clearly."
+      }
+    ],
+    "fixes": [
+      {
+        "title": "Deleted nutrients stay deleted",
+        "desc": "With iCloud on, a nutrient you deleted could come back after reopening the app. Deleted nutrients now stay deleted."
+      },
+      {
+        "title": "The iCloud Sync switch works",
+        "desc": "Turning iCloud Sync off in Settings now really stops syncing on that device. The switch is per device and applies the next time you open nutrx."
+      },
+      {
+        "title": "\"1 goal\", not \"1 goals\"",
+        "desc": "With a single nutrient, Today, widgets, the Watch and the weekly recap now read \"0 of 1 goal met\"."
+      }
+    ]
+  },
+  {
     "version": "2.1",
     "date": "16 Oct 2026",
     "features": [
