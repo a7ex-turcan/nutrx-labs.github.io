@@ -1,5 +1,45 @@
 [
   {
+    "version": "2.2.1",
+    "date": "21 Oct 2026",
+    "features": [],
+    "improvements": [],
+    "fixes": [
+      {
+        "title": "Reminders show up when you add them",
+        "desc": "In a nutrient's Reminders, a newly added time now appears in the list straight away, and a time that's already set can't be added twice."
+      },
+      {
+        "title": "My Nutrients at large text sizes",
+        "desc": "At accessibility text sizes, rows put the goal and amount under the name instead of breaking words mid-way, also in Select mode."
+      },
+      {
+        "title": "VoiceOver on the paywall",
+        "desc": "While a purchase is in progress, the button reads “Purchasing…” instead of nothing, and the spinner while plans load reads “Loading plans”."
+      },
+      {
+        "title": "No more lost changes in the nutrient form",
+        "desc": "Swiping the New or Edit Nutrient sheet down no longer throws away what you typed; Cancel asks “Discard changes?” first. An untouched form still closes straight away."
+      },
+      {
+        "title": "Disabled Add and Save look disabled in dark mode",
+        "desc": "In the nutrient form and Edit Profile, the Add or Save button no longer looks tappable before the form is ready."
+      },
+      {
+        "title": "Next reminder shows right away",
+        "desc": "Today's card now shows your next reminder as soon as the app opens or notifications are allowed, instead of only after switching tabs."
+      },
+      {
+        "title": "The “Enable notifications” banner goes away",
+        "desc": "Allowing notifications from Settings or a nutrient's reminders now removes the banner on Today straight away, instead of leaving it until you closed it."
+      },
+      {
+        "title": "Courses on the nutrx Pro screens",
+        "desc": "The paywall, the Pro screen and “Enjoy nutrx Pro” now list Courses, so it's clear Pro includes it."
+      }
+    ]
+  },
+  {
     "version": "2.2",
     "date": "18 Oct 2026",
     "features": [
