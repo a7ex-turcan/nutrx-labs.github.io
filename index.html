@@ -477,6 +477,42 @@
     .download-card .section-lead { margin-bottom: 34px; }
     .download-card .version-tag { align-items: center; margin-top: 16px; }
 
+    /* ─── ALSO FROM NUTRX LABS (game colours from princess.nutrx-labs.com) ─── */
+    .sibling { padding: 0 0 20px; }
+    .sibling-card {
+      display: flex; align-items: center; gap: 32px;
+      background: #2A2150;
+      border-radius: 36px;
+      padding: 40px 44px;
+      color: #D9D2F5;
+      text-decoration: none;
+      box-shadow: 0 24px 48px -28px rgba(27,21,56,0.7);
+      transition: transform .2s ease;
+    }
+    .sibling-card:hover { transform: translateY(-2px); }
+    .sibling-crown {
+      flex-shrink: 0;
+      width: 104px; height: 104px; border-radius: 26px;
+      background: #3B3170;
+      box-shadow: inset 0 0 0 2px #6B5BA8;
+      display: grid; place-items: center;
+    }
+    .sibling-crown svg { width: 68px; height: auto; }
+    .sibling-text { flex: 1; min-width: 0; }
+    .sibling-text .eyebrow { color: #B8ADEA; margin-bottom: 10px; }
+    .sibling-text .eyebrow::before { background: #FFD25A; }
+    .sibling-text h3 {
+      font-family: var(--display); font-weight: 800; letter-spacing: -0.02em;
+      font-size: 28px; line-height: 1.15; color: #fff; margin-bottom: 8px;
+    }
+    .sibling-text p { font-size: 15px; line-height: 1.6; }
+    .sibling-go {
+      flex-shrink: 0;
+      background: #FFD25A; color: #2A2150;
+      border-radius: 999px; padding: 12px 20px;
+      font-size: 15px; font-weight: 700; white-space: nowrap;
+    }
+
     /* ─── NEWSLETTER ─── */
     .newsletter { padding: 72px 0 90px; }
     .newsletter-inner {
@@ -571,6 +607,8 @@
       .newsletter-inner { flex-direction: column; align-items: stretch; padding: 28px 22px; gap: 22px; }
       .newsletter-form { width: 100%; }
       .newsletter-form input { flex: 1; width: auto; min-width: 0; }
+      .sibling-card { flex-direction: column; text-align: center; gap: 22px; padding: 36px 24px; }
+      .sibling-text .eyebrow { justify-content: center; }
       .footer { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
       .float-widget { left: -2px; bottom: 14px; width: 132px; }
@@ -969,6 +1007,31 @@
 </section>
 
 
+<!-- ── ALSO FROM NUTRX LABS ── -->
+<section class="sibling">
+  <div class="wrap">
+    <a class="sibling-card fu" href="https://princess.nutrx-labs.com">
+      <div class="sibling-crown" aria-hidden="true">
+        <svg viewBox="0 -3 16 16" shape-rendering="crispEdges">
+          <path d="M2 0h1v1h-1zM7 0h2v1h-2zM13 0h1v1h-1zM1 1h1v1h-1zM3 1h1v1h-1zM6 1h1v1h-1zM9 1h1v1h-1zM12 1h1v1h-1zM14 1h1v1h-1zM1 2h1v1h-1zM4 2h2v1h-2zM10 2h2v1h-2zM14 2h1v1h-1zM1 3h1v1h-1zM14 3h1v1h-1zM1 4h1v1h-1zM14 4h1v1h-1zM1 5h1v1h-1zM14 5h1v1h-1zM1 6h1v1h-1zM14 6h1v1h-1zM2 7h12v1h-12z" fill="#6B3A00"/>
+          <path d="M2 1h1v1h-1zM7 1h2v1h-2zM13 1h1v1h-1zM2 2h2v1h-2zM6 2h4v1h-4zM12 2h2v1h-2zM2 3h1v1h-1zM4 3h8v1h-8zM13 3h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM9 4h1v1h-1zM11 4h3v1h-3zM2 5h12v1h-12z" fill="#FFD25A"/>
+          <path d="M2 6h12v1h-12z" fill="#D89B1A"/>
+          <path d="M5 4h1v1h-1zM10 4h1v1h-1z" fill="#E8481C"/>
+          <path d="M7 4h2v1h-2z" fill="#3FA9F5"/>
+          <path d="M3 3h1v1h-1zM12 3h1v1h-1z" fill="#FFFFFF"/>
+        </svg>
+      </div>
+      <div class="sibling-text">
+        <p class="eyebrow">Also from nutrx Labs</p>
+        <h3>Where's My Crown?</h3>
+        <p>A gentle 16-bit princess maze adventure for little kids, aged about 3 to 7. A game idea by Nati, age 4. Coming soon to iPhone and iPad.</p>
+      </div>
+      <span class="sibling-go">Visit the game →</span>
+    </a>
+  </div>
+</section>
+
+
 <!-- ── NEWSLETTER ── -->
 <section class="newsletter">
   <div class="wrap">
@@ -1001,6 +1064,7 @@
       <a href="privacy.html">Privacy Policy</a>
       <a href="changelog.html">What's New</a>
       <a href="support.html">Support</a>
+      <a href="https://princess.nutrx-labs.com">Where's My Crown?</a>
       <a href="https://github.com/a7ex-turcan/nutrx" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
