@@ -1,5 +1,61 @@
 [
   {
+    "version": "2.4",
+    "date": "24 Oct 2026",
+    "features": [
+      {
+        "title": "nutrx Pro: Schedules",
+        "desc": "A nutrient can follow a schedule instead of every day: set weekdays, every few days, on and off (5 days on, 2 off), or a few times a week. On a day it isn’t due, it moves to a collapsed Not today section on Today with the next day it’s due, its reminders stay quiet, and the day never counts as missed in History, streaks, analytics, the weekly recap or the doctor report. The widgets, the Watch and stacks follow the same days.",
+        "icon": "<path d=\"M4 6h16v14H4zM4 10h16M8 3v4M16 3v4\"/><path d=\"M8 14h.01M12 14h.01M16 14h.01M8 17h.01\"/>"
+      },
+      {
+        "title": "nutrx Pro: weekly nutrients in the doctor report",
+        "desc": "A nutrient taken a few times a week shows its goal as “3 times a week” and its rate as “3 of 4 weeks”, so it isn’t read as days.",
+        "icon": "<path d=\"M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5\"/>"
+      }
+    ],
+    "improvements": [
+      {
+        "title": "Your day score stays in view",
+        "desc": "Scroll down Today and the day-score card tucks itself under the title: its ring unrolls into a slim bar with a segment per goal, so your score and streak stay in view while you log. Scroll back up, or tap the bar, and it rolls back into the ring."
+      },
+      {
+        "title": "Suggest a feature",
+        "desc": "A new row in Settings opens an email to the nutrx team with your app and iOS version filled in. nutrx doesn’t track what you do in it, so this is the best way to tell us what you’d like next."
+      },
+      {
+        "title": "Logging on a day off says so",
+        "desc": "Logging a nutrient from Not today keeps the entry, and the log sheet says it won’t count toward your goal and when it’s next due."
+      },
+      {
+        "title": "Courses reopen the way you set them",
+        "desc": "A course set “for 10 days” reopens with the days left, instead of switching to a date."
+      }
+    ],
+    "fixes": [
+      {
+        "title": "Chart dates under the right day",
+        "desc": "On a nutrient’s 30- and 90-day charts, each date now sits under its own day instead of halfway to the next one. At the largest text sizes the 7-day chart shows every weekday, with today’s in bold."
+      },
+      {
+        "title": "The paywall at larger text sizes",
+        "desc": "The plan line no longer splits “1 week free” across two lines, and the free-week badge moves under Yearly instead of breaking in two."
+      },
+      {
+        "title": "The unit stays readable beside the amount",
+        "desc": "At the largest text sizes on smaller iPhones, the amount in the log sheet shrinks a little so the unit beside it shows in full."
+      },
+      {
+        "title": "Log while typing a note",
+        "desc": "The log sheet’s Log button sits just above the keyboard while you type, instead of hiding behind the keyboard’s Done bar on smaller iPhones."
+      },
+      {
+        "title": "Log button in view on shorter screens",
+        "desc": "On the iPhone SE and the folded iPhone Duo, the log sheet opens tall enough to show the Log button."
+      }
+    ]
+  },
+  {
     "version": "2.3",
     "date": "23 Oct 2026",
     "features": [
