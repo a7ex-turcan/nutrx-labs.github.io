@@ -246,9 +246,134 @@
       <div class="release-dot"></div>
       <div class="release-body">
         <div class="release-header">
+          <span class="release-version">v2.5</span>
+          <span class="release-date">28 Oct 2026</span>
+          <span class="release-badge badge-latest">Current</span>
+        </div>
+        <div class="change-groups">
+          <div>
+            <p class="change-group-label label-features">Features</p>
+            <div class="change-list">
+              <div class="change-item">
+                <div class="change-icon icon-feature">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#1B3B2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">nutrx Pro: widgets and controls</p>
+                  <p class="change-desc">Log from outside the app. Two controls for Control Center, the Lock Screen and the Action button: Log stack logs a stack you pick, and Log nutrient logs one step of a nutrient. A Nutrient widget shows one nutrient’s ring and progress, with a + on the Home Screen, or as a ring on the Lock Screen, and a Supply and courses widget lists what’s running low or ending soonest. The five widgets you already have stay free.</p>
+                </div>
+              </div>
+              <div class="change-item">
+                <div class="change-icon icon-feature">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#1B3B2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13.4l-6.6 6.6a2 2 0 0 1-2.8 0L4 13.4V4h9.4l6.6 6.6a2 2 0 0 1 0 2.8z"/><path d="M8.5 8.5h.01"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">nutrx Pro: what your supply costs</p>
+                  <p class="change-desc">Add a price per bottle in a nutrient’s Supply settings to see what it costs a month on its Supply card, for each stack, and for everything at the end of My Nutrients. When a bottle runs low, Add to list puts it on a list of your choice, Apple’s Reminders included, through the share sheet: nutrx asks for no access to your reminders.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="change-group-label label-improvements">Improvements</p>
+            <div class="change-list">
+              <div class="change-item">
+                <div class="change-icon icon-improvement">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#1EB955" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 14 9 9 13 13 20 6"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">A shorter Pro page</p>
+                  <p class="change-desc">nutrx Pro’s features are grouped into four rows, so the plans start on screen instead of below eight rows.</p>
+                </div>
+              </div>
+              <div class="change-item">
+                <div class="change-icon icon-improvement">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#1EB955" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 14 9 9 13 13 20 6"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">Weekly nutrients in the doctor report, part two</p>
+                  <p class="change-desc">A nutrient taken a few times a week now shows “Days counted” in its section, matching its chart, instead of every day it was logged, and the chart says which days count.</p>
+                </div>
+              </div>
+              <div class="change-item">
+                <div class="change-icon icon-improvement">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#1EB955" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 14 9 9 13 13 20 6"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">No “Fill to goal” on a day off</p>
+                  <p class="change-desc">Logging a nutrient from Not today no longer offers to fill it to its goal, since that log won’t count toward it.</p>
+                </div>
+              </div>
+              <div class="change-item">
+                <div class="change-icon icon-improvement">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#1EB955" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 14 9 9 13 13 20 6"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">Editing an amount</p>
+                  <p class="change-desc">While you edit the amount in the log sheet it shows without thousands separators, so deleting a digit from “1,000” gives 100, not a number the app misreads. Tap Done and it’s formatted like the rest of the app again.</p>
+                </div>
+              </div>
+              <div class="change-item">
+                <div class="change-icon icon-improvement">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#1EB955" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 14 9 9 13 13 20 6"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">“Out of supply” in amber</p>
+                  <p class="change-desc">On Today, a bottle that’s run out now reads “Out of supply” in amber, like one that’s running low, instead of grey.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="change-group-label label-fixes">Fixes</p>
+            <div class="change-list">
+              <div class="change-item">
+                <div class="change-icon icon-fix">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#E08A1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">“Stack” said once</p>
+                  <p class="change-desc">The Siri tip on a stack named “Morning stack” now reads “Log the Morning stack with nutrx”, a phrase Siri understands, instead of “Log my Morning stack stack”.</p>
+                </div>
+              </div>
+              <div class="change-item">
+                <div class="change-icon icon-fix">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#E08A1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">The right nutrient’s numbers</p>
+                  <p class="change-desc">If a nutrient’s analytics was open when a refill reminder or another link opened a different nutrient, the screen showed the new name over the old one’s numbers. It now shows the nutrient you opened.</p>
+                </div>
+              </div>
+              <div class="change-item">
+                <div class="change-icon icon-fix">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#E08A1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">Group names at the largest text sizes</p>
+                  <p class="change-desc">On Today, a group’s name no longer breaks mid-word at the largest text sizes: its count moves under the name, and a name with a very long word is set a little smaller so every word stays whole.</p>
+                </div>
+              </div>
+              <div class="change-item">
+                <div class="change-icon icon-fix">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#E08A1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <div class="change-text">
+                  <p class="change-title">Log clear of the keyboard’s Done bar</p>
+                  <p class="change-desc">In the log sheet, Done now sits just above the Log button instead of on a bar over the keyboard, so nothing covers Log while you edit the amount or a note, even with a hardware keyboard or after turning the iPhone sideways and back.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="release">
+      <div class="release-dot"></div>
+      <div class="release-body">
+        <div class="release-header">
           <span class="release-version">v2.4</span>
           <span class="release-date">24 Oct 2026</span>
-          <span class="release-badge badge-latest">Current</span>
         </div>
         <div class="change-groups">
           <div>

@@ -1,5 +1,61 @@
 [
   {
+    "version": "2.5",
+    "date": "28 Oct 2026",
+    "features": [
+      {
+        "title": "nutrx Pro: widgets and controls",
+        "desc": "Log from outside the app. Two controls for Control Center, the Lock Screen and the Action button: Log stack logs a stack you pick, and Log nutrient logs one step of a nutrient. A Nutrient widget shows one nutrient’s ring and progress, with a + on the Home Screen, or as a ring on the Lock Screen, and a Supply and courses widget lists what’s running low or ending soonest. The five widgets you already have stay free.",
+        "icon": "<path d=\"M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z\"/>"
+      },
+      {
+        "title": "nutrx Pro: what your supply costs",
+        "desc": "Add a price per bottle in a nutrient’s Supply settings to see what it costs a month on its Supply card, for each stack, and for everything at the end of My Nutrients. When a bottle runs low, Add to list puts it on a list of your choice, Apple’s Reminders included, through the share sheet: nutrx asks for no access to your reminders.",
+        "icon": "<path d=\"M20 13.4l-6.6 6.6a2 2 0 0 1-2.8 0L4 13.4V4h9.4l6.6 6.6a2 2 0 0 1 0 2.8z\"/><path d=\"M8.5 8.5h.01\"/>"
+      }
+    ],
+    "improvements": [
+      {
+        "title": "A shorter Pro page",
+        "desc": "nutrx Pro’s features are grouped into four rows, so the plans start on screen instead of below eight rows."
+      },
+      {
+        "title": "Weekly nutrients in the doctor report, part two",
+        "desc": "A nutrient taken a few times a week now shows “Days counted” in its section, matching its chart, instead of every day it was logged, and the chart says which days count."
+      },
+      {
+        "title": "No “Fill to goal” on a day off",
+        "desc": "Logging a nutrient from Not today no longer offers to fill it to its goal, since that log won’t count toward it."
+      },
+      {
+        "title": "Editing an amount",
+        "desc": "While you edit the amount in the log sheet it shows without thousands separators, so deleting a digit from “1,000” gives 100, not a number the app misreads. Tap Done and it’s formatted like the rest of the app again."
+      },
+      {
+        "title": "“Out of supply” in amber",
+        "desc": "On Today, a bottle that’s run out now reads “Out of supply” in amber, like one that’s running low, instead of grey."
+      }
+    ],
+    "fixes": [
+      {
+        "title": "“Stack” said once",
+        "desc": "The Siri tip on a stack named “Morning stack” now reads “Log the Morning stack with nutrx”, a phrase Siri understands, instead of “Log my Morning stack stack”."
+      },
+      {
+        "title": "The right nutrient’s numbers",
+        "desc": "If a nutrient’s analytics was open when a refill reminder or another link opened a different nutrient, the screen showed the new name over the old one’s numbers. It now shows the nutrient you opened."
+      },
+      {
+        "title": "Group names at the largest text sizes",
+        "desc": "On Today, a group’s name no longer breaks mid-word at the largest text sizes: its count moves under the name, and a name with a very long word is set a little smaller so every word stays whole."
+      },
+      {
+        "title": "Log clear of the keyboard’s Done bar",
+        "desc": "In the log sheet, Done now sits just above the Log button instead of on a bar over the keyboard, so nothing covers Log while you edit the amount or a note, even with a hardware keyboard or after turning the iPhone sideways and back."
+      }
+    ]
+  },
+  {
     "version": "2.4",
     "date": "24 Oct 2026",
     "features": [
