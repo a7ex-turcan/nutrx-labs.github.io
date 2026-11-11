@@ -10,6 +10,7 @@ This repository is a static GitHub Pages marketing site for the nutrx iOS app at
 - `nutrx_icon_1024.png`: shared app icon asset
 - `CNAME`: custom domain for GitHub Pages
 - `CLAUDE.md`: existing repo notes for coding agents
+- `tools/`: the WebKit screenshot scripts for PRs (below); not part of the site
 
 Each page contains its own inline CSS and page-specific JavaScript. Keep navigation, typography, and palette decisions aligned across pages.
 
@@ -49,6 +50,14 @@ Recent commits use short imperative summaries, for example `Add the privacy page
 - group related page/content changes into a single commit
 - in PRs, include a brief summary, affected pages, and screenshots for visual changes
 - link the relevant issue or task when one exists
+
+### Screenshots for a PR
+Two WebKit scripts in `tools/` render the site without a browser, at @2x. Serve the site first with `python3 -m http.server 8765 --bind 127.0.0.1`, then:
+
+- `swift tools/snap.swift <url> <out.png> <width>`: the whole page, e.g. `swift tools/snap.swift http://127.0.0.1:8765/changelog.html changelog.png 1280`.
+- `swift tools/snapel.swift <url> <selector> <out.png> <width> [js]`: everything a CSS selector matches, with a 24 pt margin, e.g. `'#pro'` on `index.html` at 390 for the phone layout. The optional JavaScript runs before measuring, e.g. `"document.querySelectorAll('details').forEach(function(d){d.open=true})"` to open the FAQ's answers.
+
+Both turn off the `.fu` reveal (an offscreen web view never scrolls, so sections stayed blank), and wait 2.5 s after loading for fonts, images and the changelog's fetch. Take the changed sections at a desktop width (1280) and a phone width (390).
 
 ## Deployment & Content Notes
 Changes pushed to the default branch deploy through GitHub Pages. Treat `privacy.html` and `support.html` edits carefully, and preserve production endpoints, domain settings, and contact links unless needed.
